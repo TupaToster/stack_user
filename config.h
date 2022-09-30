@@ -22,7 +22,11 @@
 #define POISON4 0xBADC0FEE
 #define POISON8 0xBADC0FEEF04DED32
 
-#define StackDump(stk) insideStackDump (&stk, #stk, __FILE__, __FUNCTION__, __LINE__)
+#define setPoison(var) setPoisonInside (&var, sizeof (var))
+
+#define isPoison(var) isPoisonInside (&var, sizeof (var))
+
+#define StackDump(stk) StackDumpInside (&stk, #stk, __FILE__, __FUNCTION__, __LINE__)
 
 //endof inside defines
 enum StackErrorCodes {
@@ -35,7 +39,8 @@ enum StackErrorCodes {
     NULL_STACK_PTR       = 1<<5,
     NULL_STACK_CAN_L_PTR = 1<<6,
     NULL_STACK_CAN_R_PTR = 1<<7,
-    WRONG_SIZE           = 1<<8
+    WRONG_SIZE           = 1<<8,
+    POISONED_ERRCOD      = 1<<9
 };
 
 struct Stack {
@@ -62,3 +67,6 @@ void StackSizeShift (Stack* stk, int delta);
 
 void insideStackDump (Stack* stk, const char* StackName, const char* fileName, const char* funcName, size_t line);
 
+unsigned long long StackErrCheck (Stack* stk);
+
+void StackLogPrintErrors (Stack* stk);
