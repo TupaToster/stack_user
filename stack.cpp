@@ -52,6 +52,7 @@ Stack StackCtor () {
 
     stk.canL      = CANL;
     stk.canR      = CANR;
+    stk.hash      = 0;
     stk.size      = 0;
     stk.capacity  = 4;
     stk.errCode   = ok;
@@ -63,6 +64,8 @@ Stack StackCtor () {
 
    *stk.stackCanL = CANL;
    *stk.stackCanR = CANR;
+
+    StackCountHash (&stk);
 
     return stk;
 }
@@ -77,6 +80,7 @@ void StackDtor (Stack* stk) {
     setPoison ( stk->stackCanL );
     setPoison ( stk->stackCanR );
     setPoison ( stk->errCode   );
+    setPoison ( stk->hash      );
 
     for (int i = 0; i < stk->capacity;i++) setPoison (stk->stack[i]);
 
@@ -89,17 +93,23 @@ void StackDtor (Stack* stk) {
 
 void StackPush (Stack* stk, ELEM_TYPE val) {
 
+    StackVerifyHash (stk);
+
     if (StackErrCheck (stk) & POISONED_ERRCOD) return;
 
-    if (stk->size == stk->capacity) StackSizeShift (stk, 1);
+    if (stk->size == stk->capacity) ReallocStackSizeShift (stk, 1);
 
     stk->stack[stk->size] = val;
     stk->size++;
 
     StackErrCheck (stk);
+
+    StackCountHash (stk);
 }
 
 ELEM_TYPE StackPop (Stack* stk) {
+
+    StackVerifyHash (stk);
 
     if (StackErrCheck (stk)&POISONED_ERRCOD) return 0;
 
@@ -107,13 +117,18 @@ ELEM_TYPE StackPop (Stack* stk) {
     stk->stack[stk->size-1] = 0;
     stk->size--;
 
-    if (stk->capacity > 4 and stk->size == stk->capacity * 3 / 8) StackSizeShift (stk, -1);
+    if (stk->capacity > 4 and stk->size == stk->capacity * 3 / 8) ReallocStackSizeShift (stk, -1);
 
     StackErrCheck (stk);
+
+    StackCountHash (stk);
+
     return retVal;
 }
 
-void StackSizeShift (Stack* stk, int delta) {
+void ReallocStackSizeShift (Stack* stk, int delta) {
+
+    StackVerifyHash (stk);
 
     if (StackErrCheck (stk) & POISONED_ERRCOD) return;
 
@@ -142,12 +157,16 @@ void StackSizeShift (Stack* stk, int delta) {
     stk->stackCanR = (unsigned int*) (stk->stack + stk->capacity * sizeof (ELEM_TYPE));
    *stk->stackCanR = CANR;
 
-   StackErrCheck (stk);
+    StackErrCheck (stk);
+
+    StackCountHash (stk);
 }
 
 void StackDumpInside (Stack* stk, const char* StackName, const char* fileName, const char* funcName, size_t line) {
 
     flogFileInit;
+
+    StackVerifyHash (stk);
 
     if (stk == NULL or StackErrCheck (stk)&POISONED_ERRCOD){
         fprintf (logOutf, "In file %s, function %s, line %u, stack named %s is destroyed and has no values\n", fileName, funcName, line, StackName);
@@ -159,6 +178,10 @@ void StackDumpInside (Stack* stk, const char* StackName, const char* fileName, c
 
     fprintf (logOutf, "\tErrors : \n");
     StackLogPrintErrors (stk);
+
+    fprintf (logOutf, "\thash = %u (", stk->hash);
+    if (stk->hash == POISON4) fprintf (logOutf, "POISONED)\n");
+    else fprintf (logOutf, "ok)\n");
 
     fprintf (logOutf, "\tcanL = 0x%X (", stk->canL);
     if (stk->canL == POISON4) fprintf (logOutf, "POISONED)\n");
@@ -198,6 +221,8 @@ void StackDumpInside (Stack* stk, const char* StackName, const char* fileName, c
         fprintf (logOutf, "\n");
     }
     fprintf (logOutf, "\tEnd of stack\nEnd of dump\n");
+
+    StackCountHash (stk);
 }
 
 unsigned long long StackErrCheck (Stack* stk) {
@@ -212,7 +237,8 @@ unsigned long long StackErrCheck (Stack* stk) {
         isPoison ( stk->stackCanL) or
         isPoison (*stk->stackCanL) or
         isPoison ( stk->stackCanR) or
-        isPoison (*stk->stackCanR)    ) stk->errCode |= POISON_ACCESS;
+        isPoison (*stk->stackCanR) or
+        isPoison ( stk->hash     )   ) stk->errCode |= POISON_ACCESS;
     else {
 
         for (int i = 0; i < stk->capacity;i++) {
@@ -235,12 +261,16 @@ unsigned long long StackErrCheck (Stack* stk) {
     if ( stk->stack     == NULL         ) stk->errCode |= NULL_STACK_PTR;
     if ( stk->size      >  stk->capacity) stk->errCode |= WRONG_SIZE;
 
+    StackCountHash (stk);
+
     return stk->errCode;
 }
 
 void StackLogPrintErrors (Stack* stk) {
 
-    char names [10][40] = {};
+    //StackCountHash (stk);
+
+    char names [11][40] = {};
     int iter = 0;
     if (stk->errCode & POISON_ACCESS        ) strcpy (names[iter++], "\t\t[POISON_ACCESS       ]\n");
     if (stk->errCode & BAD_CAN_L            ) strcpy (names[iter++], "\t\t[BAD_CAN_L           ]\n");
@@ -252,9 +282,52 @@ void StackLogPrintErrors (Stack* stk) {
     if (stk->errCode & NULL_STACK_CAN_R_PTR ) strcpy (names[iter++], "\t\t[NULL_STACK_CAN_R_PTR]\n");
     if (stk->errCode & WRONG_SIZE           ) strcpy (names[iter++], "\t\t[WRONG_SIZE          ]\n");
     if (stk->errCode & POISONED_ERRCOD      ) strcpy (names[iter++], "\t\t[POISONED_ERRCOD     ]\n");
+    if (stk->errCode & WRONG_HASH           ) strcpy (names[iter++], "\t\t[WRONG_HASH          ]\n");
 
     if (iter == 0) fprintf (logOutf, "\t\t[ok]\n");
     else
         for (int i = 0; i < iter; i++) fprintf (logOutf, "%s", names[i]);
 
 }
+
+void StackCountHash (Stack* stk) {
+
+    unsigned int newHash = 0, multiplier = 1;
+    char* ptr = (char*) &stk->canL;
+
+    for (int i = 0; i < sizeof (unsigned int); i++) {
+
+        newHash += ((unsigned int) *ptr++) * multiplier;
+        multiplier *= MULT;
+    }
+
+    ptr = (char*) &stk->size;
+
+    while (ptr != ((char*) &stk->canR) + sizeof (unsigned int)) {
+
+        newHash += ((unsigned int) *ptr++) * multiplier;
+        multiplier *= MULT;
+    }
+
+    ptr = (char*) stk->stackCanL;
+
+    while (ptr != ((char*) stk->stackCanR) + sizeof (unsigned int)) {
+
+        newHash += ((unsigned int) *ptr++) * multiplier;
+        multiplier *= MULT;
+    }
+
+    stk->hash = newHash;
+}
+
+void StackVerifyHash (Stack* stk) {
+
+    unsigned int oldHash = stk->hash;
+    StackCountHash (stk);
+
+    if (stk->hash != oldHash) {
+
+        stk->errCode |= WRONG_HASH;
+    }
+}
+

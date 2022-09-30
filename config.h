@@ -22,6 +22,8 @@
 #define POISON4 0xBADC0FEE
 #define POISON8 0xBADC0FEEF04DED32
 
+#define MULT 37u
+
 #define setPoison(var) setPoisonInside (&var, sizeof (var))
 
 #define isPoison(var) isPoisonInside (&var, sizeof (var))
@@ -40,12 +42,14 @@ enum StackErrorCodes {
     NULL_STACK_CAN_L_PTR = 1<<6,
     NULL_STACK_CAN_R_PTR = 1<<7,
     WRONG_SIZE           = 1<<8,
-    POISONED_ERRCOD      = 1<<9
+    POISONED_ERRCOD      = 1<<9,
+    WRONG_HASH           = 1<<10
 };
 
 struct Stack {
 
     unsigned int  canL      = 0xDEADBEEF;
+    unsigned int  hash      = 0;
     size_t        size      = 0;
     size_t        capacity  = 0;
     size_t        errCode   = ok;
@@ -63,10 +67,14 @@ void StackPush (Stack* stk, ELEM_TYPE val);
 
 ELEM_TYPE StackPop (Stack* stk);
 
-void StackSizeShift (Stack* stk, int delta);
+void ReallocStackSizeShift (Stack* stk, int delta);
 
 void insideStackDump (Stack* stk, const char* StackName, const char* fileName, const char* funcName, size_t line);
 
 unsigned long long StackErrCheck (Stack* stk);
 
 void StackLogPrintErrors (Stack* stk);
+
+void StackCountHash (Stack* stk);
+
+void StackVerifyHash (Stack* stk);

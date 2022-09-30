@@ -15,14 +15,6 @@ void flogIntern (const void* val, const char* varType, const char* varName, size
 
 FILE* logOutf = NULL;
 
-#define flogprintf(args)                                                                          \
-            if (logOutf == NULL){                                                                 \
-                logOutf = fopen ("logs_out", "a");                                                \
-                setvbuf (logOutf, NULL, _IONBF, 0);                                               \
-                fprintf (logOutf, "----------------------------------------\n"                    \
-                "Logging session at compiled time : %s %s \n\n", __TIME__, __DATE__);             \
-            }                                                                                     \
-            fprintf (logOutf, args);
 
 
 #define flog(a)                                                                                   \

@@ -1,12 +1,27 @@
 ----------------------------------------
-Logging session at compiled time : 22:04:03 Sep 30 2022 
+Logging session at compiled time : 23:54:10 Sep 30 2022 
 
-----------------------------------------
-Logging session at compiled time : 22:05:09 Sep 30 2022 
-
-In file main.cpp, function main, line 12, stack named lol was dumped : 
+In file main.cpp, function main, line 10, stack named lol was dumped : 
 	Errors : 
 		[ok]
+	hash = 2637818739 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 0
+		lol.stack[1] : 0
+		lol.stack[2] : 0
+		lol.stack[3] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 17, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 3463112661 (ok)
 	canL = 0xDEADBEEF (ok)
 	canR = 0xD34DB33F (ok)
 	size = 40 (ok)
@@ -80,24 +95,10 @@ In file main.cpp, function main, line 12, stack named lol was dumped :
 		lol.stack[63] : 0
 	End of stack
 End of dump
-----------------------------------------
-Logging session at compiled time : 22:05:43 Sep 30 2022 
-
-In file main.cpp, function main, line 13, stack named lol is destroyed and has no values
-----------------------------------------
-Logging session at compiled time : 22:06:02 Sep 30 2022 
-
-In file main.cpp, function main, line 13, stack named lol was dumped : 
+In file main.cpp, function main, line 21, stack named lol was dumped : 
 	Errors : 
-		[POISON_ACCESS       ]
-		[BAD_CAN_L           ]
-		[BAD_CAN_R           ]
-		[BAD_STACK_CAN_L     ]
-		[BAD_STACK_CAN_R     ]
-		[NULL_STACK_PTR      ]
-		[NULL_STACK_CAN_L_PTR]
-		[NULL_STACK_CAN_R_PTR]
-		[WRONG_SIZE          ]
+		[ok]
+	hash = 3463112661 (ok)
 	canL = 0xDEADBEEF (ok)
 	canR = 0xD34DB33F (ok)
 	size = 40 (ok)
@@ -169,5 +170,926 @@ In file main.cpp, function main, line 13, stack named lol was dumped :
 		lol.stack[61] : 0
 		lol.stack[62] : 0
 		lol.stack[63] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 28, stack named lol was dumped : 
+	Errors : 
+		[WRONG_HASH          ]
+	hash = 1738858266 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 15 (ok)
+	capacity = 32 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 0
+		lol.stack[16] : 0
+		lol.stack[17] : 0
+		lol.stack[18] : 0
+		lol.stack[19] : 0
+		lol.stack[20] : 0
+		lol.stack[21] : 0
+		lol.stack[22] : 0
+		lol.stack[23] : 0
+		lol.stack[24] : 0
+		lol.stack[25] : 0
+		lol.stack[26] : 0
+		lol.stack[27] : 0
+		lol.stack[28] : 0
+		lol.stack[29] : 0
+		lol.stack[30] : 0
+		lol.stack[31] : 0
+	End of stack
+End of dump
+----------------------------------------
+Logging session at compiled time : 23:54:10 Sep 30 2022 
+
+In file main.cpp, function main, line 10, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 2282570931 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 0
+		lol.stack[1] : 0
+		lol.stack[2] : 0
+		lol.stack[3] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 17, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 336193509 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 40 (ok)
+	capacity = 64 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 32
+		lol.stack[16] : 34
+		lol.stack[17] : 36
+		lol.stack[18] : 38
+		lol.stack[19] : 40
+		lol.stack[20] : 42
+		lol.stack[21] : 44
+		lol.stack[22] : 46
+		lol.stack[23] : 48
+		lol.stack[24] : 50
+		lol.stack[25] : 52
+		lol.stack[26] : 54
+		lol.stack[27] : 56
+		lol.stack[28] : 58
+		lol.stack[29] : 60
+		lol.stack[30] : 62
+		lol.stack[31] : 64
+		lol.stack[32] : 66
+		lol.stack[33] : 68
+		lol.stack[34] : 70
+		lol.stack[35] : 72
+		lol.stack[36] : 74
+		lol.stack[37] : 76
+		lol.stack[38] : 78
+		lol.stack[39] : 80
+		lol.stack[40] : 0
+		lol.stack[41] : 0
+		lol.stack[42] : 0
+		lol.stack[43] : 0
+		lol.stack[44] : 0
+		lol.stack[45] : 0
+		lol.stack[46] : 0
+		lol.stack[47] : 0
+		lol.stack[48] : 0
+		lol.stack[49] : 0
+		lol.stack[50] : 0
+		lol.stack[51] : 0
+		lol.stack[52] : 0
+		lol.stack[53] : 0
+		lol.stack[54] : 0
+		lol.stack[55] : 0
+		lol.stack[56] : 0
+		lol.stack[57] : 0
+		lol.stack[58] : 0
+		lol.stack[59] : 0
+		lol.stack[60] : 0
+		lol.stack[61] : 0
+		lol.stack[62] : 0
+		lol.stack[63] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 21, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 336193509 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 40 (ok)
+	capacity = 64 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 32
+		lol.stack[16] : 34
+		lol.stack[17] : 36
+		lol.stack[18] : 38
+		lol.stack[19] : 40
+		lol.stack[20] : 42
+		lol.stack[21] : 44
+		lol.stack[22] : 46
+		lol.stack[23] : 48
+		lol.stack[24] : 50
+		lol.stack[25] : 52
+		lol.stack[26] : 54
+		lol.stack[27] : 56
+		lol.stack[28] : 58
+		lol.stack[29] : 60
+		lol.stack[30] : 62
+		lol.stack[31] : 64
+		lol.stack[32] : 66
+		lol.stack[33] : 68
+		lol.stack[34] : 70
+		lol.stack[35] : 72
+		lol.stack[36] : 74
+		lol.stack[37] : 76
+		lol.stack[38] : 78
+		lol.stack[39] : 80
+		lol.stack[40] : 0
+		lol.stack[41] : 0
+		lol.stack[42] : 0
+		lol.stack[43] : 0
+		lol.stack[44] : 0
+		lol.stack[45] : 0
+		lol.stack[46] : 0
+		lol.stack[47] : 0
+		lol.stack[48] : 0
+		lol.stack[49] : 0
+		lol.stack[50] : 0
+		lol.stack[51] : 0
+		lol.stack[52] : 0
+		lol.stack[53] : 0
+		lol.stack[54] : 0
+		lol.stack[55] : 0
+		lol.stack[56] : 0
+		lol.stack[57] : 0
+		lol.stack[58] : 0
+		lol.stack[59] : 0
+		lol.stack[60] : 0
+		lol.stack[61] : 0
+		lol.stack[62] : 0
+		lol.stack[63] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 28, stack named lol was dumped : 
+	Errors : 
+		[WRONG_HASH          ]
+	hash = 3760539688 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 15 (ok)
+	capacity = 32 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 0
+		lol.stack[16] : 0
+		lol.stack[17] : 0
+		lol.stack[18] : 0
+		lol.stack[19] : 0
+		lol.stack[20] : 0
+		lol.stack[21] : 0
+		lol.stack[22] : 0
+		lol.stack[23] : 0
+		lol.stack[24] : 0
+		lol.stack[25] : 0
+		lol.stack[26] : 0
+		lol.stack[27] : 0
+		lol.stack[28] : 0
+		lol.stack[29] : 0
+		lol.stack[30] : 0
+		lol.stack[31] : 0
+	End of stack
+End of dump
+----------------------------------------
+Logging session at compiled time : 23:54:10 Sep 30 2022 
+
+In file main.cpp, function main, line 10, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 3957793031 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 0
+		lol.stack[1] : 0
+		lol.stack[2] : 0
+		lol.stack[3] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 17, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 1102449315 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 40 (ok)
+	capacity = 64 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 32
+		lol.stack[16] : 34
+		lol.stack[17] : 36
+		lol.stack[18] : 38
+		lol.stack[19] : 40
+		lol.stack[20] : 42
+		lol.stack[21] : 44
+		lol.stack[22] : 46
+		lol.stack[23] : 48
+		lol.stack[24] : 50
+		lol.stack[25] : 52
+		lol.stack[26] : 54
+		lol.stack[27] : 56
+		lol.stack[28] : 58
+		lol.stack[29] : 60
+		lol.stack[30] : 62
+		lol.stack[31] : 64
+		lol.stack[32] : 66
+		lol.stack[33] : 68
+		lol.stack[34] : 70
+		lol.stack[35] : 72
+		lol.stack[36] : 74
+		lol.stack[37] : 76
+		lol.stack[38] : 78
+		lol.stack[39] : 80
+		lol.stack[40] : 0
+		lol.stack[41] : 0
+		lol.stack[42] : 0
+		lol.stack[43] : 0
+		lol.stack[44] : 0
+		lol.stack[45] : 0
+		lol.stack[46] : 0
+		lol.stack[47] : 0
+		lol.stack[48] : 0
+		lol.stack[49] : 0
+		lol.stack[50] : 0
+		lol.stack[51] : 0
+		lol.stack[52] : 0
+		lol.stack[53] : 0
+		lol.stack[54] : 0
+		lol.stack[55] : 0
+		lol.stack[56] : 0
+		lol.stack[57] : 0
+		lol.stack[58] : 0
+		lol.stack[59] : 0
+		lol.stack[60] : 0
+		lol.stack[61] : 0
+		lol.stack[62] : 0
+		lol.stack[63] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 21, stack named lol was dumped : 
+	Errors : 
+		[WRONG_HASH          ]
+	hash = 1169442679 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 40 (ok)
+	capacity = 64 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 32
+		lol.stack[16] : 34
+		lol.stack[17] : 36
+		lol.stack[18] : 38
+		lol.stack[19] : 40
+		lol.stack[20] : 42
+		lol.stack[21] : 44
+		lol.stack[22] : 46
+		lol.stack[23] : 48
+		lol.stack[24] : 50
+		lol.stack[25] : 52
+		lol.stack[26] : 54
+		lol.stack[27] : 56
+		lol.stack[28] : 58
+		lol.stack[29] : 60
+		lol.stack[30] : 62
+		lol.stack[31] : 64
+		lol.stack[32] : 66
+		lol.stack[33] : 68
+		lol.stack[34] : 70
+		lol.stack[35] : 72
+		lol.stack[36] : 74
+		lol.stack[37] : 76
+		lol.stack[38] : 78
+		lol.stack[39] : 80
+		lol.stack[40] : 0
+		lol.stack[41] : 0
+		lol.stack[42] : 0
+		lol.stack[43] : 0
+		lol.stack[44] : 0
+		lol.stack[45] : 0
+		lol.stack[46] : 0
+		lol.stack[47] : 0
+		lol.stack[48] : 0
+		lol.stack[49] : 0
+		lol.stack[50] : 0
+		lol.stack[51] : 0
+		lol.stack[52] : 0
+		lol.stack[53] : 0
+		lol.stack[54] : 0
+		lol.stack[55] : 0
+		lol.stack[56] : 0
+		lol.stack[57] : 0
+		lol.stack[58] : 0
+		lol.stack[59] : 0
+		lol.stack[60] : 0
+		lol.stack[61] : 0
+		lol.stack[62] : 0
+		lol.stack[63] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 28, stack named lol was dumped : 
+	Errors : 
+		[WRONG_HASH          ]
+	hash = 2421001114 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 15 (ok)
+	capacity = 32 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 0
+		lol.stack[16] : 0
+		lol.stack[17] : 0
+		lol.stack[18] : 0
+		lol.stack[19] : 0
+		lol.stack[20] : 0
+		lol.stack[21] : 0
+		lol.stack[22] : 0
+		lol.stack[23] : 0
+		lol.stack[24] : 0
+		lol.stack[25] : 0
+		lol.stack[26] : 0
+		lol.stack[27] : 0
+		lol.stack[28] : 0
+		lol.stack[29] : 0
+		lol.stack[30] : 0
+		lol.stack[31] : 0
+	End of stack
+End of dump
+----------------------------------------
+Logging session at compiled time : 23:54:10 Sep 30 2022 
+
+In file main.cpp, function main, line 10, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 1317844447 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 0
+		lol.stack[1] : 0
+		lol.stack[2] : 0
+		lol.stack[3] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 17, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 1534013123 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 40 (ok)
+	capacity = 64 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 32
+		lol.stack[16] : 34
+		lol.stack[17] : 36
+		lol.stack[18] : 38
+		lol.stack[19] : 40
+		lol.stack[20] : 42
+		lol.stack[21] : 44
+		lol.stack[22] : 46
+		lol.stack[23] : 48
+		lol.stack[24] : 50
+		lol.stack[25] : 52
+		lol.stack[26] : 54
+		lol.stack[27] : 56
+		lol.stack[28] : 58
+		lol.stack[29] : 60
+		lol.stack[30] : 62
+		lol.stack[31] : 64
+		lol.stack[32] : 66
+		lol.stack[33] : 68
+		lol.stack[34] : 70
+		lol.stack[35] : 72
+		lol.stack[36] : 74
+		lol.stack[37] : 76
+		lol.stack[38] : 78
+		lol.stack[39] : 80
+		lol.stack[40] : 0
+		lol.stack[41] : 0
+		lol.stack[42] : 0
+		lol.stack[43] : 0
+		lol.stack[44] : 0
+		lol.stack[45] : 0
+		lol.stack[46] : 0
+		lol.stack[47] : 0
+		lol.stack[48] : 0
+		lol.stack[49] : 0
+		lol.stack[50] : 0
+		lol.stack[51] : 0
+		lol.stack[52] : 0
+		lol.stack[53] : 0
+		lol.stack[54] : 0
+		lol.stack[55] : 0
+		lol.stack[56] : 0
+		lol.stack[57] : 0
+		lol.stack[58] : 0
+		lol.stack[59] : 0
+		lol.stack[60] : 0
+		lol.stack[61] : 0
+		lol.stack[62] : 0
+		lol.stack[63] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 21, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 1534013123 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 40 (ok)
+	capacity = 64 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 32
+		lol.stack[16] : 34
+		lol.stack[17] : 36
+		lol.stack[18] : 38
+		lol.stack[19] : 40
+		lol.stack[20] : 42
+		lol.stack[21] : 44
+		lol.stack[22] : 46
+		lol.stack[23] : 48
+		lol.stack[24] : 50
+		lol.stack[25] : 52
+		lol.stack[26] : 54
+		lol.stack[27] : 56
+		lol.stack[28] : 58
+		lol.stack[29] : 60
+		lol.stack[30] : 62
+		lol.stack[31] : 64
+		lol.stack[32] : 66
+		lol.stack[33] : 68
+		lol.stack[34] : 70
+		lol.stack[35] : 72
+		lol.stack[36] : 74
+		lol.stack[37] : 76
+		lol.stack[38] : 78
+		lol.stack[39] : 80
+		lol.stack[40] : 0
+		lol.stack[41] : 0
+		lol.stack[42] : 0
+		lol.stack[43] : 0
+		lol.stack[44] : 0
+		lol.stack[45] : 0
+		lol.stack[46] : 0
+		lol.stack[47] : 0
+		lol.stack[48] : 0
+		lol.stack[49] : 0
+		lol.stack[50] : 0
+		lol.stack[51] : 0
+		lol.stack[52] : 0
+		lol.stack[53] : 0
+		lol.stack[54] : 0
+		lol.stack[55] : 0
+		lol.stack[56] : 0
+		lol.stack[57] : 0
+		lol.stack[58] : 0
+		lol.stack[59] : 0
+		lol.stack[60] : 0
+		lol.stack[61] : 0
+		lol.stack[62] : 0
+		lol.stack[63] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 28, stack named lol was dumped : 
+	Errors : 
+		[WRONG_HASH          ]
+	hash = 341798576 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 15 (ok)
+	capacity = 32 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 0
+		lol.stack[16] : 0
+		lol.stack[17] : 0
+		lol.stack[18] : 0
+		lol.stack[19] : 0
+		lol.stack[20] : 0
+		lol.stack[21] : 0
+		lol.stack[22] : 0
+		lol.stack[23] : 0
+		lol.stack[24] : 0
+		lol.stack[25] : 0
+		lol.stack[26] : 0
+		lol.stack[27] : 0
+		lol.stack[28] : 0
+		lol.stack[29] : 0
+		lol.stack[30] : 0
+		lol.stack[31] : 0
+	End of stack
+End of dump
+----------------------------------------
+Logging session at compiled time : 23:55:06 Sep 30 2022 
+
+In file main.cpp, function main, line 10, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 987850874 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 0
+		lol.stack[1] : 0
+		lol.stack[2] : 0
+		lol.stack[3] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 17, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 1277664410 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 40 (ok)
+	capacity = 64 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 32
+		lol.stack[16] : 34
+		lol.stack[17] : 36
+		lol.stack[18] : 38
+		lol.stack[19] : 40
+		lol.stack[20] : 42
+		lol.stack[21] : 44
+		lol.stack[22] : 46
+		lol.stack[23] : 48
+		lol.stack[24] : 50
+		lol.stack[25] : 52
+		lol.stack[26] : 54
+		lol.stack[27] : 56
+		lol.stack[28] : 58
+		lol.stack[29] : 60
+		lol.stack[30] : 62
+		lol.stack[31] : 64
+		lol.stack[32] : 66
+		lol.stack[33] : 68
+		lol.stack[34] : 70
+		lol.stack[35] : 72
+		lol.stack[36] : 74
+		lol.stack[37] : 76
+		lol.stack[38] : 78
+		lol.stack[39] : 80
+		lol.stack[40] : 0
+		lol.stack[41] : 0
+		lol.stack[42] : 0
+		lol.stack[43] : 0
+		lol.stack[44] : 0
+		lol.stack[45] : 0
+		lol.stack[46] : 0
+		lol.stack[47] : 0
+		lol.stack[48] : 0
+		lol.stack[49] : 0
+		lol.stack[50] : 0
+		lol.stack[51] : 0
+		lol.stack[52] : 0
+		lol.stack[53] : 0
+		lol.stack[54] : 0
+		lol.stack[55] : 0
+		lol.stack[56] : 0
+		lol.stack[57] : 0
+		lol.stack[58] : 0
+		lol.stack[59] : 0
+		lol.stack[60] : 0
+		lol.stack[61] : 0
+		lol.stack[62] : 0
+		lol.stack[63] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 21, stack named lol was dumped : 
+	Errors : 
+		[WRONG_HASH          ]
+	hash = 1344657774 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 40 (ok)
+	capacity = 64 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 32
+		lol.stack[16] : 34
+		lol.stack[17] : 36
+		lol.stack[18] : 38
+		lol.stack[19] : 40
+		lol.stack[20] : 42
+		lol.stack[21] : 44
+		lol.stack[22] : 46
+		lol.stack[23] : 48
+		lol.stack[24] : 50
+		lol.stack[25] : 52
+		lol.stack[26] : 54
+		lol.stack[27] : 56
+		lol.stack[28] : 58
+		lol.stack[29] : 60
+		lol.stack[30] : 62
+		lol.stack[31] : 64
+		lol.stack[32] : 66
+		lol.stack[33] : 68
+		lol.stack[34] : 70
+		lol.stack[35] : 72
+		lol.stack[36] : 74
+		lol.stack[37] : 76
+		lol.stack[38] : 78
+		lol.stack[39] : 80
+		lol.stack[40] : 0
+		lol.stack[41] : 0
+		lol.stack[42] : 0
+		lol.stack[43] : 0
+		lol.stack[44] : 0
+		lol.stack[45] : 0
+		lol.stack[46] : 0
+		lol.stack[47] : 0
+		lol.stack[48] : 0
+		lol.stack[49] : 0
+		lol.stack[50] : 0
+		lol.stack[51] : 0
+		lol.stack[52] : 0
+		lol.stack[53] : 0
+		lol.stack[54] : 0
+		lol.stack[55] : 0
+		lol.stack[56] : 0
+		lol.stack[57] : 0
+		lol.stack[58] : 0
+		lol.stack[59] : 0
+		lol.stack[60] : 0
+		lol.stack[61] : 0
+		lol.stack[62] : 0
+		lol.stack[63] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 28, stack named lol was dumped : 
+	Errors : 
+		[WRONG_HASH          ]
+	hash = 1152001933 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 15 (ok)
+	capacity = 32 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 0
+		lol.stack[16] : 0
+		lol.stack[17] : 0
+		lol.stack[18] : 0
+		lol.stack[19] : 0
+		lol.stack[20] : 0
+		lol.stack[21] : 0
+		lol.stack[22] : 0
+		lol.stack[23] : 0
+		lol.stack[24] : 0
+		lol.stack[25] : 0
+		lol.stack[26] : 0
+		lol.stack[27] : 0
+		lol.stack[28] : 0
+		lol.stack[29] : 0
+		lol.stack[30] : 0
+		lol.stack[31] : 0
 	End of stack
 End of dump
