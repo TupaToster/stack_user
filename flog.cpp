@@ -3,7 +3,7 @@
 #pragma GCC diagnostic ignored "-Wsign-compare"
 #pragma GCC diagnostic ignored "-Wformat-extra-args"
 
-
+#define FLOG_DEBUG_TIME 1
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,20 +13,30 @@
 
 void flogIntern (const void* val, const char* varType, const char* varName, size_t varSize, const char* fileName, const char* funcName, size_t line);
 
-
 FILE* logOutf = NULL;
 
+#define flogprintf(args)                                                                          \
+            if (logOutf == NULL){                                                                 \
+                logOutf = fopen ("logs_out", "a");                                                \
+                setvbuf (logOutf, NULL, _IONBF, 0);                                               \
+                fprintf (logOutf, "----------------------------------------\n"                    \
+                "Logging session at compiled time : %s %s \n\n", __TIME__, __DATE__);             \
+            }                                                                                     \
+            fprintf (logOutf, args);
 
-#define flog(a) \
-            if (logOutf == NULL){\
-                logOutf = fopen ("logs_out", "a");\
-                fprintf (logOutf, "----------------------------------------\n"\
-                "Logging session at compiled time : %s %s \n\n", __TIME__, __DATE__);\
-            }\
+
+#define flog(a)                                                                                   \
+            if (logOutf == NULL){                                                                 \
+                logOutf = fopen ("logs_out", "a");                                                \
+                setvbuf (logOutf, NULL, _IONBF, 0);                                               \
+                fprintf (logOutf, "----------------------------------------\n"                    \
+                "Logging session at compiled time : %s %s \n\n", __TIME__, __DATE__);             \
+            }                                                                                     \
             flogIntern (&a, typeid (a).name (), #a, sizeof (a), __FILE__, __FUNCTION__, __LINE__)
 
 #ifdef NO_LOG
 #define flog(a) ;
+#define flogprintf(args) ;
 #endif
 
 // i - int
@@ -41,6 +51,14 @@ FILE* logOutf = NULL;
 // j - int
 // y - long long
 // h - char
+
+#define flogFileInit if (logOutf == NULL){                                                        \
+                logOutf = fopen ("logs_out", "a");                                                \
+                setvbuf (logOutf, NULL, _IONBF, 0);                                               \
+                fprintf (logOutf, "----------------------------------------\n"                    \
+                "Logging session at compiled time : %s %s \n\n", __TIME__, __DATE__);             \
+            } 
+
 void flogIntern (const void* val, const char* varType, const char* varName, size_t varSize, const char* fileName, const char* funcName, size_t line) {
 
     fprintf (logOutf, "In file %s, function %s, line %u : %s = ", fileName, funcName, line, varName);

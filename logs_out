@@ -1,253 +1,403 @@
 ----------------------------------------
-Logging session at compiled time : 16:06:37 Sep 24 2022 
+Logging session at compiled time : 19:38:50 Sep 30 2022 
 
-In file main.cpp, function main, line 12 : kok = 0064FEFC;
-In file main.cpp, function main, line 13 : temp = 14;
-In file main.cpp, function main, line 14 : aye = 2;
-In file main.cpp, function main, line 15 : innt = -1;
+In file main.cpp, function main, line 10, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 0
+		lol.stack[1] : 0
+		lol.stack[2] : 0
+		lol.stack[3] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 12, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 1 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 0
+		lol.stack[2] : 0
+		lol.stack[3] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 14, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 2 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 0
+		lol.stack[3] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 16, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 3 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 18, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 4 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+	End of stack
+End of dump
+In file main.cpp, function main, line 20, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 5 (ok)
+	capacity = 8 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 1
+		lol.stack[5] : 0
+		lol.stack[6] : 0
+		lol.stack[7] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 22, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 4 (ok)
+	capacity = 8 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 0
+		lol.stack[5] : 0
+		lol.stack[6] : 0
+		lol.stack[7] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 24, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 3 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 0
+	End of stack
+End of dump
 ----------------------------------------
-Logging session at compiled time : 16:06:37 Sep 24 2022 
+Logging session at compiled time : 19:40:29 Sep 30 2022 
 
-In file main.cpp, function main, line 12 : kok = 0064FEFC;
-In file main.cpp, function main, line 13 : temp = 14;
-In file main.cpp, function main, line 14 : aye = 2;
-In file main.cpp, function main, line 15 : innt = -1;
+In file main.cpp, function main, line 22, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 12 (ok)
+	capacity = 16 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 1
+		lol.stack[5] : 1
+		lol.stack[6] : 1
+		lol.stack[7] : 1
+		lol.stack[8] : 1
+		lol.stack[9] : 1
+		lol.stack[10] : 1
+		lol.stack[11] : 1
+		lol.stack[12] : 0
+		lol.stack[13] : 0
+		lol.stack[14] : 0
+		lol.stack[15] : 0
+	End of stack
+End of dump
 ----------------------------------------
-Logging session at compiled time : 16:08:12 Sep 24 2022 
+Logging session at compiled time : 19:41:22 Sep 30 2022 
 
-In file main.cpp, function main, line 13 : kok = <¿A>;
-In file main.cpp, function main, line 14 : temp = 14;
-In file main.cpp, function main, line 15 : aye = 2;
-In file main.cpp, function main, line 16 : innt = -1;
+In file main.cpp, function main, line 22, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 12 (ok)
+	capacity = 16 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 1
+		lol.stack[5] : 1
+		lol.stack[6] : 1
+		lol.stack[7] : 1
+		lol.stack[8] : 1
+		lol.stack[9] : 1
+		lol.stack[10] : 1
+		lol.stack[11] : 1
+		lol.stack[12] : 0
+		lol.stack[13] : 0
+		lol.stack[14] : 0
+		lol.stack[15] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 29, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 6 (ok)
+	capacity = 8 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 1
+		lol.stack[5] : 1
+		lol.stack[6] : 0
+		lol.stack[7] : 0
+	End of stack
+End of dump
 ----------------------------------------
-Logging session at compiled time : 16:18:01 Sep 24 2022 
+Logging session at compiled time : 19:41:36 Sep 30 2022 
 
-In file main.cpp, function main, line 12 : kok = <óA>;
-In file main.cpp, function main, line 13 : temp = 14;
-In file main.cpp, function main, line 14 : aye = 2;
-In file main.cpp, function main, line 15 : innt = -1;
+In file main.cpp, function main, line 22, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 12 (ok)
+	capacity = 16 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 1
+		lol.stack[5] : 1
+		lol.stack[6] : 1
+		lol.stack[7] : 1
+		lol.stack[8] : 1
+		lol.stack[9] : 1
+		lol.stack[10] : 1
+		lol.stack[11] : 1
+		lol.stack[12] : 0
+		lol.stack[13] : 0
+		lol.stack[14] : 0
+		lol.stack[15] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 29, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 7 (ok)
+	capacity = 16 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 1
+		lol.stack[5] : 1
+		lol.stack[6] : 1
+		lol.stack[7] : 0
+		lol.stack[8] : 0
+		lol.stack[9] : 0
+		lol.stack[10] : 0
+		lol.stack[11] : 0
+		lol.stack[12] : 0
+		lol.stack[13] : 0
+		lol.stack[14] : 0
+		lol.stack[15] : 0
+	End of stack
+End of dump
 ----------------------------------------
-Logging session at compiled time : 16:34:37 Sep 24 2022 
+Logging session at compiled time : 19:42:03 Sep 30 2022 
 
-In file main.cpp, function main, line 12 : kok = <ðA>;
-In file main.cpp, function main, line 13 : temp = 14;
-In file main.cpp, function main, line 14 : aye = 2;
-In file main.cpp, function main, line 15 : innt = -1;
+In file main.cpp, function main, line 22, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 12 (ok)
+	capacity = 16 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 1
+		lol.stack[5] : 1
+		lol.stack[6] : 1
+		lol.stack[7] : 1
+		lol.stack[8] : 1
+		lol.stack[9] : 1
+		lol.stack[10] : 1
+		lol.stack[11] : 1
+		lol.stack[12] : 0
+		lol.stack[13] : 0
+		lol.stack[14] : 0
+		lol.stack[15] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 29, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 6 (ok)
+	capacity = 8 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 1
+		lol.stack[5] : 1
+		lol.stack[6] : 0
+		lol.stack[7] : 0
+	End of stack
+End of dump
 ----------------------------------------
-Logging session at compiled time : 16:36:57 Sep 24 2022 
+Logging session at compiled time : 20:06:00 Sep 30 2022 
 
-In file main.cpp, function main, line 12 : kok = <ðA>;
-In file main.cpp, function main, line 13 : temp = 14;
-In file main.cpp, function main, line 14 : aye = 2;
-In file main.cpp, function main, line 15 : innt = -1;
+In file main.cpp, function main, line 22, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 12 (ok)
+	capacity = 16 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 1
+		lol.stack[5] : 1
+		lol.stack[6] : 1
+		lol.stack[7] : 1
+		lol.stack[8] : 1
+		lol.stack[9] : 1
+		lol.stack[10] : 1
+		lol.stack[11] : 1
+		lol.stack[12] : 0
+		lol.stack[13] : 0
+		lol.stack[14] : 0
+		lol.stack[15] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 29, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 6 (ok)
+	capacity = 8 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 1
+		lol.stack[5] : 1
+		lol.stack[6] : 0
+		lol.stack[7] : 0
+	End of stack
+End of dump
 ----------------------------------------
-Logging session at compiled time : 16:39:21 Sep 24 2022 
+Logging session at compiled time : 20:06:21 Sep 30 2022 
 
-In file main.cpp, function main, line 12 : kok = <pochemu ya nahuy>;
-In file main.cpp, function main, line 13 : temp = 14;
-In file main.cpp, function main, line 14 : aye = 2;
-In file main.cpp, function main, line 15 : innt = -1;
-----------------------------------------
-Logging session at compiled time : 16:40:12 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok = <pochemu tak>;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = ;
-----------------------------------------
-Logging session at compiled time : 16:40:41 Sep 24 2022 
-
-In file main.cpp, function main, line 15 : kok1 = 21;
-In file main.cpp, function main, line 16 : temp = 14;
-In file main.cpp, function main, line 17 : aye = 2;
-In file main.cpp, function main, line 18 : innt = -1;
-In file main.cpp, function main, line 19 : what = ;
-----------------------------------------
-Logging session at compiled time : 16:41:00 Sep 24 2022 
-
-In file main.cpp, function main, line 15 : kok1 = 21;
-In file main.cpp, function main, line 16 : temp = 14;
-In file main.cpp, function main, line 17 : aye = 2;
-In file main.cpp, function main, line 18 : innt = -1;
-In file main.cpp, function main, line 19 : what = ;
-----------------------------------------
-Logging session at compiled time : 16:41:38 Sep 24 2022 
-
-In file main.cpp, function main, line 15 : kok1 = 21;
-In file main.cpp, function main, line 16 : temp = 14;
-In file main.cpp, function main, line 17 : aye = 2;
-In file main.cpp, function main, line 18 : innt = -1;
-In file main.cpp, function main, line 19 : what = ;
-----------------------------------------
-Logging session at compiled time : 16:42:32 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = -0.000000;
-----------------------------------------
-Logging session at compiled time : 16:43:13 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = -0.000000;
-----------------------------------------
-Logging session at compiled time : 16:43:13 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = -0.000000;
-----------------------------------------
-Logging session at compiled time : 16:43:45 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = ;
-----------------------------------------
-Logging session at compiled time : 16:44:11 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = -0.000000;
-----------------------------------------
-Logging session at compiled time : 16:44:56 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = -0.000000;
-----------------------------------------
-Logging session at compiled time : 16:45:07 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = -0.000000;
-----------------------------------------
-Logging session at compiled time : 16:47:00 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = ;
-----------------------------------------
-Logging session at compiled time : 16:47:10 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = 1.123435;
-----------------------------------------
-Logging session at compiled time : 16:47:23 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = 1.123435;
-----------------------------------------
-Logging session at compiled time : 16:47:35 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = -1.4458e-232;
-----------------------------------------
-Logging session at compiled time : 16:47:35 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = -1.4458e-232;
-----------------------------------------
-Logging session at compiled time : 16:47:54 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = ;
-----------------------------------------
-Logging session at compiled time : 16:48:31 Sep 24 2022 
-
-In file main.cpp, function main, line 14 : kok1 = 21;
-In file main.cpp, function main, line 15 : temp = 14;
-In file main.cpp, function main, line 16 : aye = 2;
-In file main.cpp, function main, line 17 : innt = -1;
-In file main.cpp, function main, line 18 : what = 1.123435;
-----------------------------------------
-Logging session at compiled time : 13:31:09 Sep 26 2022 
-
-In file main.cpp, function main, line 15 : lol = 666666666666FFE6FFF654000;
-In file main.cpp, function main, line 16 : kok = <pochemu tak>;
-In file main.cpp, function main, line 17 : kok1 = 21;
-In file main.cpp, function main, line 18 : temp = 14;
-In file main.cpp, function main, line 19 : aye = 2;
-In file main.cpp, function main, line 20 : innt = -1;
-In file main.cpp, function main, line 21 : what = ;
-----------------------------------------
-Logging session at compiled time : 13:32:03 Sep 26 2022 
-
-In file main.cpp, function main, line 15 : lol = 666666666666FFE6FFF654000;
-In file main.cpp, function main, line 16 : kok = <pochemu tak>;
-In file main.cpp, function main, line 17 : kok1 = 21;
-In file main.cpp, function main, line 18 : temp = 14;
-In file main.cpp, function main, line 19 : aye = 2;
-In file main.cpp, function main, line 20 : innt = -1;
-In file main.cpp, function main, line 21 : what = 1.123435;
-----------------------------------------
-Logging session at compiled time : 13:32:52 Sep 26 2022 
-
-In file main.cpp, function main, line 15 : lol =  <UNDEFINED_FORMAT> 66 <UNDEFINED_FORMAT> 66 <UNDEFINED_FORMAT> 66 <UNDEFINED_FORMAT> 66 <UNDEFINED_FORMAT> 66 <UNDEFINED_FORMAT> 66 <UNDEFINED_FORMAT> FFE6 <UNDEFINED_FORMAT> FFF6 <UNDEFINED_FORMAT> 5 <UNDEFINED_FORMAT> 40 <UNDEFINED_FORMAT> 0 <UNDEFINED_FORMAT> 0;
-In file main.cpp, function main, line 16 : kok = <pochemu tak>;
-In file main.cpp, function main, line 17 : kok1 = 21;
-In file main.cpp, function main, line 18 : temp = 14;
-In file main.cpp, function main, line 19 : aye = 2;
-In file main.cpp, function main, line 20 : innt = -1;
-In file main.cpp, function main, line 21 : what = 1.123435;
-----------------------------------------
-Logging session at compiled time : 13:33:56 Sep 26 2022 
-
-In file main.cpp, function main, line 15 : lol = 666666666666FFE6FFF654000 :: __UNDEFINED_FORMAT__;
-In file main.cpp, function main, line 16 : kok = <pochemu tak>;
-In file main.cpp, function main, line 17 : kok1 = 21;
-In file main.cpp, function main, line 18 : temp = 14;
-In file main.cpp, function main, line 19 : aye = 2;
-In file main.cpp, function main, line 20 : innt = -1;
-In file main.cpp, function main, line 21 : what = 1.123435;
-----------------------------------------
-Logging session at compiled time : 13:35:00 Sep 26 2022 
-
-In file main.cpp, function main, line 15 : lol = 666666666666FFE6FFF654000 :: __UNDEFINED_FORMAT__:sizeof() = 12;
-In file main.cpp, function main, line 16 : kok = <pochemu tak>;
-In file main.cpp, function main, line 17 : kok1 = 21;
-In file main.cpp, function main, line 18 : temp = 14;
-In file main.cpp, function main, line 19 : aye = 2;
-In file main.cpp, function main, line 20 : innt = -1;
-In file main.cpp, function main, line 21 : what = 1.123435;
-----------------------------------------
-Logging session at compiled time : 13:35:38 Sep 26 2022 
-
-In file main.cpp, function main, line 15 : lol = 666666666666FFE6FFF654000 :: UNDEFINED_FORMAT : sizeof() = 12;
-In file main.cpp, function main, line 16 : kok = <pochemu tak>;
-In file main.cpp, function main, line 17 : kok1 = 21;
-In file main.cpp, function main, line 18 : temp = 14;
-In file main.cpp, function main, line 19 : aye = 2;
-In file main.cpp, function main, line 20 : innt = -1;
-In file main.cpp, function main, line 21 : what = 1.123435;
+In file main.cpp, function main, line 22, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 12 (ok)
+	capacity = 16 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 1
+		lol.stack[5] : 1
+		lol.stack[6] : 1
+		lol.stack[7] : 1
+		lol.stack[8] : 1
+		lol.stack[9] : 1
+		lol.stack[10] : 1
+		lol.stack[11] : 1
+		lol.stack[12] : 0
+		lol.stack[13] : 0
+		lol.stack[14] : 0
+		lol.stack[15] : 0
+	End of stack
+End of dump
+In file main.cpp, function main, line 29, stack named lol was dumped : 
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 7 (ok)
+	capacity = 16 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 1
+		lol.stack[1] : 1
+		lol.stack[2] : 1
+		lol.stack[3] : 1
+		lol.stack[4] : 1
+		lol.stack[5] : 1
+		lol.stack[6] : 1
+		lol.stack[7] : 0
+		lol.stack[8] : 0
+		lol.stack[9] : 0
+		lol.stack[10] : 0
+		lol.stack[11] : 0
+		lol.stack[12] : 0
+		lol.stack[13] : 0
+		lol.stack[14] : 0
+		lol.stack[15] : 0
+	End of stack
+End of dump
