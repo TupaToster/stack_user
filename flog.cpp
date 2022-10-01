@@ -1,9 +1,8 @@
+#pragma once
 #pragma GCC diagnostic ignored "-Wcast-qual"
 #pragma GCC diagnostic ignored "-Wformat="
 #pragma GCC diagnostic ignored "-Wsign-compare"
 #pragma GCC diagnostic ignored "-Wformat-extra-args"
-
-#define FLOG_DEBUG_TIME 1
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,11 +10,12 @@
 #include <time.h>
 #include <string.h>
 
+// DEFINE NDEBUG TO DISABLE LOGS
+
 void flogIntern (const void* val, const char* varType, const char* varName, size_t varSize, const char* fileName, const char* funcName, size_t line);
 
+
 FILE* logOutf = NULL;
-
-
 
 #define flog(a)                                                                                   \
             if (logOutf == NULL){                                                                 \
@@ -26,9 +26,17 @@ FILE* logOutf = NULL;
             }                                                                                     \
             flogIntern (&a, typeid (a).name (), #a, sizeof (a), __FILE__, __FUNCTION__, __LINE__)
 
-#ifdef NO_LOG
+
+#define flogFileInit if (logOutf == NULL){                                                        \
+                logOutf = fopen ("logs_out", "a");                                                \
+                setvbuf (logOutf, NULL, _IONBF, 0);                                               \
+                fprintf (logOutf, "----------------------------------------\n"                    \
+                "Logging session at compiled time : %s %s \n\n", __TIME__, __DATE__);             \
+            }
+
+#ifdef NDEBUG
 #define flog(a) ;
-#define flogprintf(args) ;
+#define flogFileInit ;
 #endif
 
 // i - int
@@ -43,13 +51,6 @@ FILE* logOutf = NULL;
 // j - int
 // y - long long
 // h - char
-
-#define flogFileInit if (logOutf == NULL){                                                        \
-                logOutf = fopen ("logs_out", "a");                                                \
-                setvbuf (logOutf, NULL, _IONBF, 0);                                               \
-                fprintf (logOutf, "----------------------------------------\n"                    \
-                "Logging session at compiled time : %s %s \n\n", __TIME__, __DATE__);             \
-            } 
 
 void flogIntern (const void* val, const char* varType, const char* varName, size_t varSize, const char* fileName, const char* funcName, size_t line) {
 

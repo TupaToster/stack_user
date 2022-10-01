@@ -3,3 +3,5 @@
 #include <stdlib.h>
 #include <assert.h>
 
+#include "flog.cpp"
+#include "stack.cpp"
