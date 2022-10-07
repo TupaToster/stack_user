@@ -84,7 +84,7 @@ ELEM_TYPE StackPop (Stack* stk);
 
 /// @brief Recallocates a whole stak with a size shift
 /// @param stk ptr to stack
-/// @param delta direction of sie shift: >0 - doubles the size, <0 halves the size
+/// @param delta direction of size shift: >0 - doubles the size, <0 halves the size
 void ReallocStackSizeShift (Stack* stk, int delta);
 
 /// @brief Dumps stack to logs_out

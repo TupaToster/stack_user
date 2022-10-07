@@ -1,0 +1,231 @@
+.TH "stack.cpp" 3 "Sat Oct 1 2022" "Version stak" "stak" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+stack.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'config\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetPoisonInside\fP (void *var, size_t sizeofVar)"
+.br
+.RI "Sets var to a poisoned state\&. "
+.ti -1c
+.RI "bool \fBisPoisonInside\fP (void *var, size_t sizeofVar)"
+.br
+.RI "Checks for a variable to be poisoned\&. "
+.ti -1c
+.RI "\fBStack\fP \fBStackCtor\fP ()"
+.br
+.RI "Constructor for \fBStack\fP; Sets default capacity to 4\&. "
+.ti -1c
+.RI "void \fBStackDtor\fP (\fBStack\fP *stk)"
+.br
+.RI "Destroys a stack var\&. "
+.ti -1c
+.RI "void \fBStackPush\fP (\fBStack\fP *stk, \fBELEM_TYPE\fP val)"
+.br
+.RI "Places an element at the end of a stack\&. "
+.ti -1c
+.RI "\fBELEM_TYPE\fP \fBStackPop\fP (\fBStack\fP *stk)"
+.br
+.RI "Removes an element from stack and returns its value\&. "
+.ti -1c
+.RI "void \fBReallocStackSizeShift\fP (\fBStack\fP *stk, int delta)"
+.br
+.RI "Recallocates a whole stak with a size shift\&. "
+.ti -1c
+.RI "void \fBStackDumpInside\fP (\fBStack\fP *stk, const char *StackName, const char *fileName, const char *funcName, size_t line)"
+.br
+.RI "Dumps stack to logs_out\&. "
+.ti -1c
+.RI "unsigned long long \fBStackErrCheck\fP (\fBStack\fP *stk)"
+.br
+.RI "Prints errors drom a stack variable\&. "
+.ti -1c
+.RI "void \fBStackLogPrintErrors\fP (\fBStack\fP *stk)"
+.br
+.RI "Prints errors for a StackDump func\&. "
+.ti -1c
+.RI "void \fBStackCountHash\fP (\fBStack\fP *stk)"
+.br
+.RI "Counts hash for stack\&. "
+.ti -1c
+.RI "void \fBStackVerifyHash\fP (\fBStack\fP *stk)"
+.br
+.RI "Verifies hash for stack (tells if it was changed without any \fBStack\fP specified functions) "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "bool isPoisonInside (void * var, size_t sizeofVar)"
+
+.PP
+Checks for a variable to be poisoned\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvar\fP ptr to var 
+.br
+\fIsizeofVar\fP size of var 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+1 if poisoned, 0 if not 
+.RE
+.PP
+
+.SS "void ReallocStackSizeShift (\fBStack\fP * stk, int delta)"
+
+.PP
+Recallocates a whole stak with a size shift\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.br
+\fIdelta\fP direction of size shift: >0 - doubles the size, <0 halves the size 
+.RE
+.PP
+
+.SS "void setPoisonInside (void * var, size_t sizeofVar)"
+
+.PP
+Sets var to a poisoned state\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvar\fP ptr to var 
+.br
+\fIsizeofVar\fP sizeof var 
+.RE
+.PP
+
+.SS "void StackCountHash (\fBStack\fP * stk)"
+
+.PP
+Counts hash for stack\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.RE
+.PP
+
+.SS "\fBStack\fP StackCtor ()"
+
+.PP
+Constructor for \fBStack\fP; Sets default capacity to 4\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Fully operable \fBStack\fP struct 
+.RE
+.PP
+
+.SS "void StackDtor (\fBStack\fP * stk)"
+
+.PP
+Destroys a stack var\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to a destroyable variable 
+.RE
+.PP
+
+.SS "void StackDumpInside (\fBStack\fP * stk, const char * StackName, const char * fileName, const char * funcName, size_t line)"
+
+.PP
+Dumps stack to logs_out\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.br
+\fIStackName\fP name of stack 
+.br
+\fIfileName\fP name of file function was called at 
+.br
+\fIfuncName\fP name of func function was called at 
+.br
+\fIline\fP line function was called at 
+.RE
+.PP
+
+.SS "unsigned long long StackErrCheck (\fBStack\fP * stk)"
+
+.PP
+Prints errors drom a stack variable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+error code stk->errCode 
+.RE
+.PP
+
+.SS "void StackLogPrintErrors (\fBStack\fP * stk)"
+
+.PP
+Prints errors for a StackDump func\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.RE
+.PP
+
+.SS "\fBELEM_TYPE\fP StackPop (\fBStack\fP * stk)"
+
+.PP
+Removes an element from stack and returns its value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+element that was removed 
+.RE
+.PP
+
+.SS "void StackPush (\fBStack\fP * stk, \fBELEM_TYPE\fP val)"
+
+.PP
+Places an element at the end of a stack\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack struct 
+.br
+\fIval\fP value of an element to push 
+.RE
+.PP
+
+.SS "void StackVerifyHash (\fBStack\fP * stk)"
+
+.PP
+Verifies hash for stack (tells if it was changed without any \fBStack\fP specified functions) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for stak from the source code\&.

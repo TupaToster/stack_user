@@ -1,0 +1,79 @@
+.TH "flog.cpp" 3 "Sat Oct 1 2022" "Version stak" "stak" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+flog.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <typeinfo>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBflog\fP(a)"
+.br
+.ti -1c
+.RI "#define \fBflogFileInit\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBflogIntern\fP (const void *val, const char *varType, const char *varName, size_t varSize, const char *fileName, const char *funcName, size_t line)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "FILE * \fBlogOutf\fP = NULL"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define flog(a)"
+\fBValue:\fP
+.PP
+.nf
+            if (logOutf == NULL){                                                                 \
+                logOutf = fopen ("logs_out", "a");                                                \
+                setvbuf (logOutf, NULL, _IONBF, 0);                                               \
+                fprintf (logOutf, "----------------------------------------\n"                    \
+                "Logging session at compiled time : %s %s \n\n", __TIME__, __DATE__);             \
+            }                                                                                     \
+            flogIntern (&a, typeid (a)\&.name (), #a, sizeof (a), __FILE__, __FUNCTION__, __LINE__)
+.fi
+.SS "#define flogFileInit"
+\fBValue:\fP
+.PP
+.nf
+                if (logOutf == NULL){                                                        \
+                logOutf = fopen ("logs_out", "a");                                                \
+                setvbuf (logOutf, NULL, _IONBF, 0);                                               \
+                fprintf (logOutf, "----------------------------------------\n"                    \
+                "Logging session at compiled time : %s %s \n\n", __TIME__, __DATE__);             \
+            }
+.fi
+.SH "Function Documentation"
+.PP 
+.SS "void flogIntern (const void * val, const char * varType, const char * varName, size_t varSize, const char * fileName, const char * funcName, size_t line)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "FILE* logOutf = NULL"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for stak from the source code\&.

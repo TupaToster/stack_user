@@ -1,0 +1,398 @@
+.TH "config.h" 3 "Sat Oct 1 2022" "Version stak" "stak" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+config.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'flog\&.cpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBStack\fP"
+.br
+.RI "Stores a stack with several support variables\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBELEM_TYPE\fP   int"
+.br
+.RI "Type of element a stack operates with\&. "
+.ti -1c
+.RI "#define \fBOUT_FORM\fP   '%d'"
+.br
+.RI "Output format for printf functions\&. "
+.ti -1c
+.RI "#define \fBCANL\fP   0xDEADBEEF"
+.br
+.RI "Left cannary of a structure\&. "
+.ti -1c
+.RI "#define \fBCANR\fP   0xD34DB33F"
+.br
+.RI "Right cannary of a structure\&. "
+.ti -1c
+.RI "#define \fBPOISON1\fP   0xBD"
+.br
+.RI "1 byte Poison "
+.ti -1c
+.RI "#define \fBPOISON2\fP   0xBDCF"
+.br
+.RI "2 byte Poison "
+.ti -1c
+.RI "#define \fBPOISON4\fP   0xBADC0FEE"
+.br
+.RI "4 byte Poison "
+.ti -1c
+.RI "#define \fBPOISON8\fP   0xBADC0FEEF04DED32"
+.br
+.RI "8 byte Poison "
+.ti -1c
+.RI "#define \fBMULT\fP   37u"
+.br
+.RI "Multiplier for hash\&. "
+.ti -1c
+.RI "#define \fBsetPoison\fP(var)   \fBsetPoisonInside\fP (&var, sizeof (var))"
+.br
+.RI "Macros for auto-poison\&. "
+.ti -1c
+.RI "#define \fBisPoison\fP(var)   \fBisPoisonInside\fP (&var, sizeof (var))"
+.br
+.RI "Macros for checking for poison\&. "
+.ti -1c
+.RI "#define \fBStackDump\fP(stk)   \fBStackDumpInside\fP (&stk, #stk, __FILE__, __FUNCTION__, __LINE__)"
+.br
+.RI "\fBStack\fP dump macros\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBStackErrorCodes\fP { \fBok\fP = 0, \fBPOISON_ACCESS\fP = 1<<0, \fBBAD_CAN_L\fP = 1<<1, \fBBAD_CAN_R\fP = 1<<2, \fBBAD_STACK_CAN_L\fP = 1<<3, \fBBAD_STACK_CAN_R\fP = 1<<4, \fBNULL_STACK_PTR\fP = 1<<5, \fBNULL_STACK_CAN_L_PTR\fP = 1<<6, \fBNULL_STACK_CAN_R_PTR\fP = 1<<7, \fBWRONG_SIZE\fP = 1<<8, \fBPOISONED_ERRCOD\fP = 1<<9, \fBWRONG_HASH\fP = 1<<10 }"
+.br
+.RI "Describes errors within stack\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStack\fP \fBStackCtor\fP ()"
+.br
+.RI "Constructor for \fBStack\fP; Sets default capacity to 4\&. "
+.ti -1c
+.RI "void \fBStackDtor\fP (\fBStack\fP *stk)"
+.br
+.RI "Destroys a stack var\&. "
+.ti -1c
+.RI "void \fBStackPush\fP (\fBStack\fP *stk, \fBELEM_TYPE\fP val)"
+.br
+.RI "Places an element at the end of a stack\&. "
+.ti -1c
+.RI "\fBELEM_TYPE\fP \fBStackPop\fP (\fBStack\fP *stk)"
+.br
+.RI "Removes an element from stack and returns its value\&. "
+.ti -1c
+.RI "void \fBReallocStackSizeShift\fP (\fBStack\fP *stk, int delta)"
+.br
+.RI "Recallocates a whole stak with a size shift\&. "
+.ti -1c
+.RI "void \fBStackDumpInside\fP (\fBStack\fP *stk, const char *StackName, const char *fileName, const char *funcName, size_t line)"
+.br
+.RI "Dumps stack to logs_out\&. "
+.ti -1c
+.RI "unsigned long long \fBStackErrCheck\fP (\fBStack\fP *stk)"
+.br
+.RI "Prints errors drom a stack variable\&. "
+.ti -1c
+.RI "void \fBStackLogPrintErrors\fP (\fBStack\fP *stk)"
+.br
+.RI "Prints errors for a StackDump func\&. "
+.ti -1c
+.RI "void \fBStackCountHash\fP (\fBStack\fP *stk)"
+.br
+.RI "Counts hash for stack\&. "
+.ti -1c
+.RI "void \fBStackVerifyHash\fP (\fBStack\fP *stk)"
+.br
+.RI "Verifies hash for stack (tells if it was changed without any \fBStack\fP specified functions) "
+.ti -1c
+.RI "void \fBsetPoisonInside\fP (void *var, size_t sizeofVar)"
+.br
+.RI "Sets var to a poisoned state\&. "
+.ti -1c
+.RI "bool \fBisPoisonInside\fP (void *var, size_t sizeofVar)"
+.br
+.RI "Checks for a variable to be poisoned\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CANL   0xDEADBEEF"
+
+.PP
+Left cannary of a structure\&. 
+.SS "#define CANR   0xD34DB33F"
+
+.PP
+Right cannary of a structure\&. 
+.SS "#define ELEM_TYPE   int"
+
+.PP
+Type of element a stack operates with\&. 
+.SS "#define isPoison(var)   \fBisPoisonInside\fP (&var, sizeof (var))"
+
+.PP
+Macros for checking for poison\&. 
+.SS "#define MULT   37u"
+
+.PP
+Multiplier for hash\&. 
+.SS "#define OUT_FORM   '%d'"
+
+.PP
+Output format for printf functions\&. 
+.SS "#define POISON1   0xBD"
+
+.PP
+1 byte Poison 
+.SS "#define POISON2   0xBDCF"
+
+.PP
+2 byte Poison 
+.SS "#define POISON4   0xBADC0FEE"
+
+.PP
+4 byte Poison 
+.SS "#define POISON8   0xBADC0FEEF04DED32"
+
+.PP
+8 byte Poison 
+.SS "#define setPoison(var)   \fBsetPoisonInside\fP (&var, sizeof (var))"
+
+.PP
+Macros for auto-poison\&. 
+.SS "#define StackDump(stk)   \fBStackDumpInside\fP (&stk, #stk, __FILE__, __FUNCTION__, __LINE__)"
+
+.PP
+\fBStack\fP dump macros\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBStackErrorCodes\fP"
+
+.PP
+Describes errors within stack\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIok \fP\fP
+All ok\&. 
+.TP
+\fB\fIPOISON_ACCESS \fP\fP
+One or more struct elements is poison\&. 
+.TP
+\fB\fIBAD_CAN_L \fP\fP
+Dead left cannary of structure\&. 
+.TP
+\fB\fIBAD_CAN_R \fP\fP
+Dead right cannary of structure\&. 
+.TP
+\fB\fIBAD_STACK_CAN_L \fP\fP
+Dead left cannary of stack\&. 
+.TP
+\fB\fIBAD_STACK_CAN_R \fP\fP
+Dead right cannary of stack\&. 
+.TP
+\fB\fINULL_STACK_PTR \fP\fP
+NULL ptr for stack\&. 
+.TP
+\fB\fINULL_STACK_CAN_L_PTR \fP\fP
+NULL ptr for left stack cannary\&. 
+.TP
+\fB\fINULL_STACK_CAN_R_PTR \fP\fP
+NULL ptr for right stack cannary\&. 
+.TP
+\fB\fIWRONG_SIZE \fP\fP
+Size is more than capacity\&. 
+.TP
+\fB\fIPOISONED_ERRCOD \fP\fP
+Errcod variable is poisoned; Ususally means that struct has been destructed\&. 
+.TP
+\fB\fIWRONG_HASH \fP\fP
+Hash was changed without any changes from specified function\&. 
+.SH "Function Documentation"
+.PP 
+.SS "bool isPoisonInside (void * var, size_t sizeofVar)"
+
+.PP
+Checks for a variable to be poisoned\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvar\fP ptr to var 
+.br
+\fIsizeofVar\fP size of var 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+1 if poisoned, 0 if not 
+.RE
+.PP
+
+.SS "void ReallocStackSizeShift (\fBStack\fP * stk, int delta)"
+
+.PP
+Recallocates a whole stak with a size shift\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.br
+\fIdelta\fP direction of size shift: >0 - doubles the size, <0 halves the size 
+.RE
+.PP
+
+.SS "void setPoisonInside (void * var, size_t sizeofVar)"
+
+.PP
+Sets var to a poisoned state\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvar\fP ptr to var 
+.br
+\fIsizeofVar\fP sizeof var 
+.RE
+.PP
+
+.SS "void StackCountHash (\fBStack\fP * stk)"
+
+.PP
+Counts hash for stack\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.RE
+.PP
+
+.SS "\fBStack\fP StackCtor ()"
+
+.PP
+Constructor for \fBStack\fP; Sets default capacity to 4\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Fully operable \fBStack\fP struct 
+.RE
+.PP
+
+.SS "void StackDtor (\fBStack\fP * stk)"
+
+.PP
+Destroys a stack var\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to a destroyable variable 
+.RE
+.PP
+
+.SS "void StackDumpInside (\fBStack\fP * stk, const char * StackName, const char * fileName, const char * funcName, size_t line)"
+
+.PP
+Dumps stack to logs_out\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.br
+\fIStackName\fP name of stack 
+.br
+\fIfileName\fP name of file function was called at 
+.br
+\fIfuncName\fP name of func function was called at 
+.br
+\fIline\fP line function was called at 
+.RE
+.PP
+
+.SS "unsigned long long StackErrCheck (\fBStack\fP * stk)"
+
+.PP
+Prints errors drom a stack variable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+error code stk->errCode 
+.RE
+.PP
+
+.SS "void StackLogPrintErrors (\fBStack\fP * stk)"
+
+.PP
+Prints errors for a StackDump func\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.RE
+.PP
+
+.SS "\fBELEM_TYPE\fP StackPop (\fBStack\fP * stk)"
+
+.PP
+Removes an element from stack and returns its value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+element that was removed 
+.RE
+.PP
+
+.SS "void StackPush (\fBStack\fP * stk, \fBELEM_TYPE\fP val)"
+
+.PP
+Places an element at the end of a stack\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack struct 
+.br
+\fIval\fP value of an element to push 
+.RE
+.PP
+
+.SS "void StackVerifyHash (\fBStack\fP * stk)"
+
+.PP
+Verifies hash for stack (tells if it was changed without any \fBStack\fP specified functions) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstk\fP ptr to stack 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for stak from the source code\&.

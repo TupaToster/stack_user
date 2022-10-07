@@ -1,0 +1,96 @@
+.TH "Stack" 3 "Sat Oct 1 2022" "Version stak" "stak" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Stack \- Stores a stack with several support variables\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <config\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fBcanL\fP = 0xDEADBEEF"
+.br
+.RI "left cannary of struct "
+.ti -1c
+.RI "unsigned int \fBhash\fP = 0"
+.br
+.RI "hash value "
+.ti -1c
+.RI "size_t \fBsize\fP = 0"
+.br
+.RI "size of stack "
+.ti -1c
+.RI "size_t \fBcapacity\fP = 0"
+.br
+.RI "capacity of stack "
+.ti -1c
+.RI "size_t \fBerrCode\fP = \fBok\fP"
+.br
+.RI "error code "
+.ti -1c
+.RI "\fBELEM_TYPE\fP * \fBstack\fP = NULL"
+.br
+.RI "ptr to stack "
+.ti -1c
+.RI "unsigned int * \fBstackCanL\fP = NULL"
+.br
+.RI "left cannary of stack "
+.ti -1c
+.RI "unsigned int * \fBstackCanR\fP = NULL"
+.br
+.RI "right cannary of stack "
+.ti -1c
+.RI "unsigned int \fBcanR\fP = 0xD34DB33F"
+.br
+.RI "right cannary of struct "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Stores a stack with several support variables\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "unsigned int Stack::canL = 0xDEADBEEF"
+
+.PP
+left cannary of struct 
+.SS "unsigned int Stack::canR = 0xD34DB33F"
+
+.PP
+right cannary of struct 
+.SS "size_t Stack::capacity = 0"
+
+.PP
+capacity of stack 
+.SS "size_t Stack::errCode = \fBok\fP"
+
+.PP
+error code 
+.SS "unsigned int Stack::hash = 0"
+
+.PP
+hash value 
+.SS "size_t Stack::size = 0"
+
+.PP
+size of stack 
+.SS "\fBELEM_TYPE\fP* Stack::stack = NULL"
+
+.PP
+ptr to stack 
+.SS "unsigned int* Stack::stackCanL = NULL"
+
+.PP
+left cannary of stack 
+.SS "unsigned int* Stack::stackCanR = NULL"
+
+.PP
+right cannary of stack 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for stak from the source code\&.

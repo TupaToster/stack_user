@@ -1,0 +1,236 @@
+\hypertarget{stack_8cpp}{}\doxysection{stack.\+cpp File Reference}
+\label{stack_8cpp}\index{stack.cpp@{stack.cpp}}
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{stack_8cpp_a60bb9a078b9f0f215577719c53003db2}{set\+Poison\+Inside}} (void $\ast$var, size\+\_\+t sizeof\+Var)
+\begin{DoxyCompactList}\small\item\em Sets var to a poisoned state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{stack_8cpp_a00d7f278e2c87be49ce52a84f1f925cb}{is\+Poison\+Inside}} (void $\ast$var, size\+\_\+t sizeof\+Var)
+\begin{DoxyCompactList}\small\item\em Checks for a variable to be poisoned. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_stack}{Stack}} \mbox{\hyperlink{stack_8cpp_a7f20099985e66f408b861724863a2f1b}{Stack\+Ctor}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{struct_stack}{Stack}}; Sets default capacity to 4. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stack_8cpp_a7a748c43563a85e8c5d154997597c4bb}{Stack\+Dtor}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk)
+\begin{DoxyCompactList}\small\item\em Destroys a stack var. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stack_8cpp_a6d12097bc4af03b6c58d724a10758a64}{Stack\+Push}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk, \mbox{\hyperlink{config_8h_a178d810735b72dab41331e71af8bfe99}{ELEM\+\_\+\+TYPE}} val)
+\begin{DoxyCompactList}\small\item\em Places an element at the end of a stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{config_8h_a178d810735b72dab41331e71af8bfe99}{ELEM\+\_\+\+TYPE}} \mbox{\hyperlink{stack_8cpp_a0941f0fc6decbec7accf45e25ea30eb5}{Stack\+Pop}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk)
+\begin{DoxyCompactList}\small\item\em Removes an element from stack and returns its value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stack_8cpp_ad48351fcbd6c3d4ce84d470636525430}{Realloc\+Stack\+Size\+Shift}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk, int delta)
+\begin{DoxyCompactList}\small\item\em Recallocates a whole stak with a size shift. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stack_8cpp_aa57535478796950bea6860e32e15b33c}{Stack\+Dump\+Inside}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk, const char $\ast$Stack\+Name, const char $\ast$file\+Name, const char $\ast$func\+Name, size\+\_\+t line)
+\begin{DoxyCompactList}\small\item\em Dumps stack to logs\+\_\+out. \end{DoxyCompactList}\item 
+unsigned long long \mbox{\hyperlink{stack_8cpp_a2ec9d6428127070aa546211087cc603b}{Stack\+Err\+Check}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk)
+\begin{DoxyCompactList}\small\item\em Prints errors drom a stack variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stack_8cpp_a4fe32a828f1513115f6abf92f8f9a066}{Stack\+Log\+Print\+Errors}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk)
+\begin{DoxyCompactList}\small\item\em Prints errors for a Stack\+Dump func. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stack_8cpp_a331eb5bc38763cfe6fead891904aac75}{Stack\+Count\+Hash}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk)
+\begin{DoxyCompactList}\small\item\em Counts hash for stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stack_8cpp_a81529740cd4cad5153f44e74c5c27e64}{Stack\+Verify\+Hash}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk)
+\begin{DoxyCompactList}\small\item\em Verifies hash for stack (tells if it was changed without any \mbox{\hyperlink{struct_stack}{Stack}} specified functions) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{stack_8cpp_a00d7f278e2c87be49ce52a84f1f925cb}\label{stack_8cpp_a00d7f278e2c87be49ce52a84f1f925cb}} 
+\index{stack.cpp@{stack.cpp}!isPoisonInside@{isPoisonInside}}
+\index{isPoisonInside@{isPoisonInside}!stack.cpp@{stack.cpp}}
+\doxysubsubsection{\texorpdfstring{isPoisonInside()}{isPoisonInside()}}
+{\footnotesize\ttfamily bool is\+Poison\+Inside (\begin{DoxyParamCaption}\item[{void $\ast$}]{var,  }\item[{size\+\_\+t}]{sizeof\+Var }\end{DoxyParamCaption})}
+
+
+
+Checks for a variable to be poisoned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & ptr to var \\
+\hline
+{\em sizeof\+Var} & size of var \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if poisoned, 0 if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stack_8cpp_ad48351fcbd6c3d4ce84d470636525430}\label{stack_8cpp_ad48351fcbd6c3d4ce84d470636525430}} 
+\index{stack.cpp@{stack.cpp}!ReallocStackSizeShift@{ReallocStackSizeShift}}
+\index{ReallocStackSizeShift@{ReallocStackSizeShift}!stack.cpp@{stack.cpp}}
+\doxysubsubsection{\texorpdfstring{ReallocStackSizeShift()}{ReallocStackSizeShift()}}
+{\footnotesize\ttfamily void Realloc\+Stack\+Size\+Shift (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk,  }\item[{int}]{delta }\end{DoxyParamCaption})}
+
+
+
+Recallocates a whole stak with a size shift. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+{\em delta} & direction of size shift\+: $>$0 -\/ doubles the size, $<$0 halves the size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stack_8cpp_a60bb9a078b9f0f215577719c53003db2}\label{stack_8cpp_a60bb9a078b9f0f215577719c53003db2}} 
+\index{stack.cpp@{stack.cpp}!setPoisonInside@{setPoisonInside}}
+\index{setPoisonInside@{setPoisonInside}!stack.cpp@{stack.cpp}}
+\doxysubsubsection{\texorpdfstring{setPoisonInside()}{setPoisonInside()}}
+{\footnotesize\ttfamily void set\+Poison\+Inside (\begin{DoxyParamCaption}\item[{void $\ast$}]{var,  }\item[{size\+\_\+t}]{sizeof\+Var }\end{DoxyParamCaption})}
+
+
+
+Sets var to a poisoned state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & ptr to var \\
+\hline
+{\em sizeof\+Var} & sizeof var \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stack_8cpp_a331eb5bc38763cfe6fead891904aac75}\label{stack_8cpp_a331eb5bc38763cfe6fead891904aac75}} 
+\index{stack.cpp@{stack.cpp}!StackCountHash@{StackCountHash}}
+\index{StackCountHash@{StackCountHash}!stack.cpp@{stack.cpp}}
+\doxysubsubsection{\texorpdfstring{StackCountHash()}{StackCountHash()}}
+{\footnotesize\ttfamily void Stack\+Count\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk }\end{DoxyParamCaption})}
+
+
+
+Counts hash for stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stack_8cpp_a7f20099985e66f408b861724863a2f1b}\label{stack_8cpp_a7f20099985e66f408b861724863a2f1b}} 
+\index{stack.cpp@{stack.cpp}!StackCtor@{StackCtor}}
+\index{StackCtor@{StackCtor}!stack.cpp@{stack.cpp}}
+\doxysubsubsection{\texorpdfstring{StackCtor()}{StackCtor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_stack}{Stack}} Stack\+Ctor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{struct_stack}{Stack}}; Sets default capacity to 4. 
+
+\begin{DoxyReturn}{Returns}
+Fully operable \mbox{\hyperlink{struct_stack}{Stack}} struct 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stack_8cpp_a7a748c43563a85e8c5d154997597c4bb}\label{stack_8cpp_a7a748c43563a85e8c5d154997597c4bb}} 
+\index{stack.cpp@{stack.cpp}!StackDtor@{StackDtor}}
+\index{StackDtor@{StackDtor}!stack.cpp@{stack.cpp}}
+\doxysubsubsection{\texorpdfstring{StackDtor()}{StackDtor()}}
+{\footnotesize\ttfamily void Stack\+Dtor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk }\end{DoxyParamCaption})}
+
+
+
+Destroys a stack var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to a destroyable variable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stack_8cpp_aa57535478796950bea6860e32e15b33c}\label{stack_8cpp_aa57535478796950bea6860e32e15b33c}} 
+\index{stack.cpp@{stack.cpp}!StackDumpInside@{StackDumpInside}}
+\index{StackDumpInside@{StackDumpInside}!stack.cpp@{stack.cpp}}
+\doxysubsubsection{\texorpdfstring{StackDumpInside()}{StackDumpInside()}}
+{\footnotesize\ttfamily void Stack\+Dump\+Inside (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk,  }\item[{const char $\ast$}]{Stack\+Name,  }\item[{const char $\ast$}]{file\+Name,  }\item[{const char $\ast$}]{func\+Name,  }\item[{size\+\_\+t}]{line }\end{DoxyParamCaption})}
+
+
+
+Dumps stack to logs\+\_\+out. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+{\em Stack\+Name} & name of stack \\
+\hline
+{\em file\+Name} & name of file function was called at \\
+\hline
+{\em func\+Name} & name of func function was called at \\
+\hline
+{\em line} & line function was called at \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stack_8cpp_a2ec9d6428127070aa546211087cc603b}\label{stack_8cpp_a2ec9d6428127070aa546211087cc603b}} 
+\index{stack.cpp@{stack.cpp}!StackErrCheck@{StackErrCheck}}
+\index{StackErrCheck@{StackErrCheck}!stack.cpp@{stack.cpp}}
+\doxysubsubsection{\texorpdfstring{StackErrCheck()}{StackErrCheck()}}
+{\footnotesize\ttfamily unsigned long long Stack\+Err\+Check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk }\end{DoxyParamCaption})}
+
+
+
+Prints errors drom a stack variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error code stk-\/$>$err\+Code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stack_8cpp_a4fe32a828f1513115f6abf92f8f9a066}\label{stack_8cpp_a4fe32a828f1513115f6abf92f8f9a066}} 
+\index{stack.cpp@{stack.cpp}!StackLogPrintErrors@{StackLogPrintErrors}}
+\index{StackLogPrintErrors@{StackLogPrintErrors}!stack.cpp@{stack.cpp}}
+\doxysubsubsection{\texorpdfstring{StackLogPrintErrors()}{StackLogPrintErrors()}}
+{\footnotesize\ttfamily void Stack\+Log\+Print\+Errors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk }\end{DoxyParamCaption})}
+
+
+
+Prints errors for a Stack\+Dump func. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stack_8cpp_a0941f0fc6decbec7accf45e25ea30eb5}\label{stack_8cpp_a0941f0fc6decbec7accf45e25ea30eb5}} 
+\index{stack.cpp@{stack.cpp}!StackPop@{StackPop}}
+\index{StackPop@{StackPop}!stack.cpp@{stack.cpp}}
+\doxysubsubsection{\texorpdfstring{StackPop()}{StackPop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config_8h_a178d810735b72dab41331e71af8bfe99}{ELEM\+\_\+\+TYPE}} Stack\+Pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk }\end{DoxyParamCaption})}
+
+
+
+Removes an element from stack and returns its value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+element that was removed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{stack_8cpp_a6d12097bc4af03b6c58d724a10758a64}\label{stack_8cpp_a6d12097bc4af03b6c58d724a10758a64}} 
+\index{stack.cpp@{stack.cpp}!StackPush@{StackPush}}
+\index{StackPush@{StackPush}!stack.cpp@{stack.cpp}}
+\doxysubsubsection{\texorpdfstring{StackPush()}{StackPush()}}
+{\footnotesize\ttfamily void Stack\+Push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk,  }\item[{\mbox{\hyperlink{config_8h_a178d810735b72dab41331e71af8bfe99}{ELEM\+\_\+\+TYPE}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Places an element at the end of a stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack struct \\
+\hline
+{\em val} & value of an element to push \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stack_8cpp_a81529740cd4cad5153f44e74c5c27e64}\label{stack_8cpp_a81529740cd4cad5153f44e74c5c27e64}} 
+\index{stack.cpp@{stack.cpp}!StackVerifyHash@{StackVerifyHash}}
+\index{StackVerifyHash@{StackVerifyHash}!stack.cpp@{stack.cpp}}
+\doxysubsubsection{\texorpdfstring{StackVerifyHash()}{StackVerifyHash()}}
+{\footnotesize\ttfamily void Stack\+Verify\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk }\end{DoxyParamCaption})}
+
+
+
+Verifies hash for stack (tells if it was changed without any \mbox{\hyperlink{struct_stack}{Stack}} specified functions) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+\end{DoxyParams}

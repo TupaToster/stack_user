@@ -1,0 +1,133 @@
+\hypertarget{struct_stack}{}\doxysection{Stack Struct Reference}
+\label{struct_stack}\index{Stack@{Stack}}
+
+
+Stores a stack with several support variables.  
+
+
+
+
+{\ttfamily \#include $<$config.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{struct_stack_a79193412a2c8b6a35f4ca6c45f0765dc}{canL}} = 0x\+DEADBEEF
+\begin{DoxyCompactList}\small\item\em left cannary of struct \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{struct_stack_a65b24b547c77ac4b5e6dbdc0fd6a3283}{hash}} = 0
+\begin{DoxyCompactList}\small\item\em hash value \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{struct_stack_a3a469595caaaf49bbce059efabbe07b5}{size}} = 0
+\begin{DoxyCompactList}\small\item\em size of stack \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{struct_stack_afb6d4ad9d2904c20d50102d310c963e0}{capacity}} = 0
+\begin{DoxyCompactList}\small\item\em capacity of stack \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{struct_stack_aed401c797b1e17541ad03a3fded5187d}{err\+Code}} = \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4bad8b76af209cd7ba83b4ebf33ba1637b2}{ok}}
+\begin{DoxyCompactList}\small\item\em error code \end{DoxyCompactList}\item 
+\mbox{\hyperlink{config_8h_a178d810735b72dab41331e71af8bfe99}{ELEM\+\_\+\+TYPE}} $\ast$ \mbox{\hyperlink{struct_stack_a94f7a65fb55d15a76270929f5b9c6397}{stack}} = NULL
+\begin{DoxyCompactList}\small\item\em ptr to stack \end{DoxyCompactList}\item 
+unsigned int $\ast$ \mbox{\hyperlink{struct_stack_abd443924fa635c0a50fadff4da57dfba}{stack\+CanL}} = NULL
+\begin{DoxyCompactList}\small\item\em left cannary of stack \end{DoxyCompactList}\item 
+unsigned int $\ast$ \mbox{\hyperlink{struct_stack_a09a1dd7998caf0891ae5889e9b548aea}{stack\+CanR}} = NULL
+\begin{DoxyCompactList}\small\item\em right cannary of stack \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{struct_stack_ab067c98a0541b1d261f6c44892eb08c5}{canR}} = 0x\+D34\+DB33F
+\begin{DoxyCompactList}\small\item\em right cannary of struct \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores a stack with several support variables. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_stack_a79193412a2c8b6a35f4ca6c45f0765dc}\label{struct_stack_a79193412a2c8b6a35f4ca6c45f0765dc}} 
+\index{Stack@{Stack}!canL@{canL}}
+\index{canL@{canL}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{canL}{canL}}
+{\footnotesize\ttfamily unsigned int Stack\+::canL = 0x\+DEADBEEF}
+
+
+
+left cannary of struct 
+
+\mbox{\Hypertarget{struct_stack_ab067c98a0541b1d261f6c44892eb08c5}\label{struct_stack_ab067c98a0541b1d261f6c44892eb08c5}} 
+\index{Stack@{Stack}!canR@{canR}}
+\index{canR@{canR}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{canR}{canR}}
+{\footnotesize\ttfamily unsigned int Stack\+::canR = 0x\+D34\+DB33F}
+
+
+
+right cannary of struct 
+
+\mbox{\Hypertarget{struct_stack_afb6d4ad9d2904c20d50102d310c963e0}\label{struct_stack_afb6d4ad9d2904c20d50102d310c963e0}} 
+\index{Stack@{Stack}!capacity@{capacity}}
+\index{capacity@{capacity}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily size\+\_\+t Stack\+::capacity = 0}
+
+
+
+capacity of stack 
+
+\mbox{\Hypertarget{struct_stack_aed401c797b1e17541ad03a3fded5187d}\label{struct_stack_aed401c797b1e17541ad03a3fded5187d}} 
+\index{Stack@{Stack}!errCode@{errCode}}
+\index{errCode@{errCode}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{errCode}{errCode}}
+{\footnotesize\ttfamily size\+\_\+t Stack\+::err\+Code = \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4bad8b76af209cd7ba83b4ebf33ba1637b2}{ok}}}
+
+
+
+error code 
+
+\mbox{\Hypertarget{struct_stack_a65b24b547c77ac4b5e6dbdc0fd6a3283}\label{struct_stack_a65b24b547c77ac4b5e6dbdc0fd6a3283}} 
+\index{Stack@{Stack}!hash@{hash}}
+\index{hash@{hash}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{hash}{hash}}
+{\footnotesize\ttfamily unsigned int Stack\+::hash = 0}
+
+
+
+hash value 
+
+\mbox{\Hypertarget{struct_stack_a3a469595caaaf49bbce059efabbe07b5}\label{struct_stack_a3a469595caaaf49bbce059efabbe07b5}} 
+\index{Stack@{Stack}!size@{size}}
+\index{size@{size}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily size\+\_\+t Stack\+::size = 0}
+
+
+
+size of stack 
+
+\mbox{\Hypertarget{struct_stack_a94f7a65fb55d15a76270929f5b9c6397}\label{struct_stack_a94f7a65fb55d15a76270929f5b9c6397}} 
+\index{Stack@{Stack}!stack@{stack}}
+\index{stack@{stack}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{stack}{stack}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config_8h_a178d810735b72dab41331e71af8bfe99}{ELEM\+\_\+\+TYPE}}$\ast$ Stack\+::stack = NULL}
+
+
+
+ptr to stack 
+
+\mbox{\Hypertarget{struct_stack_abd443924fa635c0a50fadff4da57dfba}\label{struct_stack_abd443924fa635c0a50fadff4da57dfba}} 
+\index{Stack@{Stack}!stackCanL@{stackCanL}}
+\index{stackCanL@{stackCanL}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{stackCanL}{stackCanL}}
+{\footnotesize\ttfamily unsigned int$\ast$ Stack\+::stack\+CanL = NULL}
+
+
+
+left cannary of stack 
+
+\mbox{\Hypertarget{struct_stack_a09a1dd7998caf0891ae5889e9b548aea}\label{struct_stack_a09a1dd7998caf0891ae5889e9b548aea}} 
+\index{Stack@{Stack}!stackCanR@{stackCanR}}
+\index{stackCanR@{stackCanR}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{stackCanR}{stackCanR}}
+{\footnotesize\ttfamily unsigned int$\ast$ Stack\+::stack\+CanR = NULL}
+
+
+
+right cannary of stack 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{config_8h}{config.\+h}}\end{DoxyCompactItemize}

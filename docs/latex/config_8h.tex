@@ -1,0 +1,476 @@
+\hypertarget{config_8h}{}\doxysection{config.\+h File Reference}
+\label{config_8h}\index{config.h@{config.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}flog.\+cpp\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_stack}{Stack}}
+\begin{DoxyCompactList}\small\item\em Stores a stack with several support variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{config_8h_a178d810735b72dab41331e71af8bfe99}{ELEM\+\_\+\+TYPE}}~int
+\begin{DoxyCompactList}\small\item\em Type of element a stack operates with. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_a11b1f1c8e585446cbd5d9817d1e3ceaa}{OUT\+\_\+\+FORM}}~\char`\"{}\%d\char`\"{}
+\begin{DoxyCompactList}\small\item\em Output format for printf functions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_ac5ba2c9a466d94cdd0fe7324a4568dbf}{CANL}}~0x\+DEADBEEF
+\begin{DoxyCompactList}\small\item\em Left cannary of a structure. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_af4177486d72b0452c84830f8b67464a8}{CANR}}~0x\+D34\+DB33F
+\begin{DoxyCompactList}\small\item\em Right cannary of a structure. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_a44ce32c2c103442949904e92a5803f44}{POISON1}}~0x\+BD
+\begin{DoxyCompactList}\small\item\em 1 byte Poison \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_a8ee8fd516222866a78ba4a4aae2eb10c}{POISON2}}~0x\+BDCF
+\begin{DoxyCompactList}\small\item\em 2 byte Poison \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_a636a49191f541b52557a278556c8640e}{POISON4}}~0x\+BADC0\+FEE
+\begin{DoxyCompactList}\small\item\em 4 byte Poison \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_a87f9c88b5d9ecba250a24151f4f4f9b9}{POISON8}}~0x\+BADC0\+FEEF04\+DED32
+\begin{DoxyCompactList}\small\item\em 8 byte Poison \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_ac441f219c1d0f60b3f606e0e6f31abd2}{MULT}}~37u
+\begin{DoxyCompactList}\small\item\em Multiplier for hash. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_ab33094546bed65d3ddf7252ec7ee53a0}{set\+Poison}}(var)~\mbox{\hyperlink{stack_8cpp_a60bb9a078b9f0f215577719c53003db2}{set\+Poison\+Inside}} (\&var, sizeof (var))
+\begin{DoxyCompactList}\small\item\em Macros for auto-\/poison. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_a20a09eaf47ec1032181089747b89510d}{is\+Poison}}(var)~\mbox{\hyperlink{stack_8cpp_a00d7f278e2c87be49ce52a84f1f925cb}{is\+Poison\+Inside}} (\&var, sizeof (var))
+\begin{DoxyCompactList}\small\item\em Macros for checking for poison. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_a69595dc2450bd35617f155ffa5738490}{Stack\+Dump}}(stk)~\mbox{\hyperlink{stack_8cpp_aa57535478796950bea6860e32e15b33c}{Stack\+Dump\+Inside}} (\&stk, \#stk, \+\_\+\+\_\+\+FILE\+\_\+\+\_\+, \+\_\+\+\_\+\+FUNCTION\+\_\+\+\_\+, \+\_\+\+\_\+\+LINE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_stack}{Stack}} dump macros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4b}{Stack\+Error\+Codes}} \{ \newline
+\mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4bad8b76af209cd7ba83b4ebf33ba1637b2}{ok}} = 0
+, \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4bafaeaafb72f3224f4bb55b58b75236287}{POISON\+\_\+\+ACCESS}} = 1$<$$<$0
+, \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4ba4215e890c310c3f5ccd3f11486b2eb78}{BAD\+\_\+\+CAN\+\_\+L}} = 1$<$$<$1
+, \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4ba58c89f81506bf0555b66e55bf326c6df}{BAD\+\_\+\+CAN\+\_\+R}} = 1$<$$<$2
+, \newline
+\mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4ba933bc67a98e186610bc08f655de7da44}{BAD\+\_\+\+STACK\+\_\+\+CAN\+\_\+L}} = 1$<$$<$3
+, \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4ba74459aaef8d1a41df374ff51fdbf38da}{BAD\+\_\+\+STACK\+\_\+\+CAN\+\_\+R}} = 1$<$$<$4
+, \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4ba55bc3e5442f1fb70cc4b4b814b9fcec5}{NULL\+\_\+\+STACK\+\_\+\+PTR}} = 1$<$$<$5
+, \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4ba15dfa62adb3f9feb09ae9dc9beb7c117}{NULL\+\_\+\+STACK\+\_\+\+CAN\+\_\+\+L\+\_\+\+PTR}} = 1$<$$<$6
+, \newline
+\mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4ba907004763cf34ab8b352775f820539c3}{NULL\+\_\+\+STACK\+\_\+\+CAN\+\_\+\+R\+\_\+\+PTR}} = 1$<$$<$7
+, \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4badb8b16b7866a0eee3872f249bc06c5ac}{WRONG\+\_\+\+SIZE}} = 1$<$$<$8
+, \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4ba5065ca273e32d5426390f43601261d6c}{POISONED\+\_\+\+ERRCOD}} = 1$<$$<$9
+, \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4baf82caa47427767f6099c52129b9ce508}{WRONG\+\_\+\+HASH}} = 1$<$$<$10
+ \}
+\begin{DoxyCompactList}\small\item\em Describes errors within stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_stack}{Stack}} \mbox{\hyperlink{config_8h_a7f20099985e66f408b861724863a2f1b}{Stack\+Ctor}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{struct_stack}{Stack}}; Sets default capacity to 4. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{config_8h_a7a748c43563a85e8c5d154997597c4bb}{Stack\+Dtor}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk)
+\begin{DoxyCompactList}\small\item\em Destroys a stack var. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{config_8h_a6d12097bc4af03b6c58d724a10758a64}{Stack\+Push}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk, \mbox{\hyperlink{config_8h_a178d810735b72dab41331e71af8bfe99}{ELEM\+\_\+\+TYPE}} val)
+\begin{DoxyCompactList}\small\item\em Places an element at the end of a stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{config_8h_a178d810735b72dab41331e71af8bfe99}{ELEM\+\_\+\+TYPE}} \mbox{\hyperlink{config_8h_a0941f0fc6decbec7accf45e25ea30eb5}{Stack\+Pop}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk)
+\begin{DoxyCompactList}\small\item\em Removes an element from stack and returns its value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{config_8h_ad48351fcbd6c3d4ce84d470636525430}{Realloc\+Stack\+Size\+Shift}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk, int delta)
+\begin{DoxyCompactList}\small\item\em Recallocates a whole stak with a size shift. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{config_8h_aa57535478796950bea6860e32e15b33c}{Stack\+Dump\+Inside}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk, const char $\ast$Stack\+Name, const char $\ast$file\+Name, const char $\ast$func\+Name, size\+\_\+t line)
+\begin{DoxyCompactList}\small\item\em Dumps stack to logs\+\_\+out. \end{DoxyCompactList}\item 
+unsigned long long \mbox{\hyperlink{config_8h_a2ec9d6428127070aa546211087cc603b}{Stack\+Err\+Check}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk)
+\begin{DoxyCompactList}\small\item\em Prints errors drom a stack variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{config_8h_a4fe32a828f1513115f6abf92f8f9a066}{Stack\+Log\+Print\+Errors}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk)
+\begin{DoxyCompactList}\small\item\em Prints errors for a Stack\+Dump func. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{config_8h_a331eb5bc38763cfe6fead891904aac75}{Stack\+Count\+Hash}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk)
+\begin{DoxyCompactList}\small\item\em Counts hash for stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{config_8h_a81529740cd4cad5153f44e74c5c27e64}{Stack\+Verify\+Hash}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$stk)
+\begin{DoxyCompactList}\small\item\em Verifies hash for stack (tells if it was changed without any \mbox{\hyperlink{struct_stack}{Stack}} specified functions) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{config_8h_a60bb9a078b9f0f215577719c53003db2}{set\+Poison\+Inside}} (void $\ast$var, size\+\_\+t sizeof\+Var)
+\begin{DoxyCompactList}\small\item\em Sets var to a poisoned state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{config_8h_a00d7f278e2c87be49ce52a84f1f925cb}{is\+Poison\+Inside}} (void $\ast$var, size\+\_\+t sizeof\+Var)
+\begin{DoxyCompactList}\small\item\em Checks for a variable to be poisoned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{config_8h_ac5ba2c9a466d94cdd0fe7324a4568dbf}\label{config_8h_ac5ba2c9a466d94cdd0fe7324a4568dbf}} 
+\index{config.h@{config.h}!CANL@{CANL}}
+\index{CANL@{CANL}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{CANL}{CANL}}
+{\footnotesize\ttfamily \#define CANL~0x\+DEADBEEF}
+
+
+
+Left cannary of a structure. 
+
+\mbox{\Hypertarget{config_8h_af4177486d72b0452c84830f8b67464a8}\label{config_8h_af4177486d72b0452c84830f8b67464a8}} 
+\index{config.h@{config.h}!CANR@{CANR}}
+\index{CANR@{CANR}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{CANR}{CANR}}
+{\footnotesize\ttfamily \#define CANR~0x\+D34\+DB33F}
+
+
+
+Right cannary of a structure. 
+
+\mbox{\Hypertarget{config_8h_a178d810735b72dab41331e71af8bfe99}\label{config_8h_a178d810735b72dab41331e71af8bfe99}} 
+\index{config.h@{config.h}!ELEM\_TYPE@{ELEM\_TYPE}}
+\index{ELEM\_TYPE@{ELEM\_TYPE}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{ELEM\_TYPE}{ELEM\_TYPE}}
+{\footnotesize\ttfamily \#define ELEM\+\_\+\+TYPE~int}
+
+
+
+Type of element a stack operates with. 
+
+\mbox{\Hypertarget{config_8h_a20a09eaf47ec1032181089747b89510d}\label{config_8h_a20a09eaf47ec1032181089747b89510d}} 
+\index{config.h@{config.h}!isPoison@{isPoison}}
+\index{isPoison@{isPoison}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{isPoison}{isPoison}}
+{\footnotesize\ttfamily \#define is\+Poison(\begin{DoxyParamCaption}\item[{}]{var }\end{DoxyParamCaption})~\mbox{\hyperlink{stack_8cpp_a00d7f278e2c87be49ce52a84f1f925cb}{is\+Poison\+Inside}} (\&var, sizeof (var))}
+
+
+
+Macros for checking for poison. 
+
+\mbox{\Hypertarget{config_8h_ac441f219c1d0f60b3f606e0e6f31abd2}\label{config_8h_ac441f219c1d0f60b3f606e0e6f31abd2}} 
+\index{config.h@{config.h}!MULT@{MULT}}
+\index{MULT@{MULT}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{MULT}{MULT}}
+{\footnotesize\ttfamily \#define MULT~37u}
+
+
+
+Multiplier for hash. 
+
+\mbox{\Hypertarget{config_8h_a11b1f1c8e585446cbd5d9817d1e3ceaa}\label{config_8h_a11b1f1c8e585446cbd5d9817d1e3ceaa}} 
+\index{config.h@{config.h}!OUT\_FORM@{OUT\_FORM}}
+\index{OUT\_FORM@{OUT\_FORM}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{OUT\_FORM}{OUT\_FORM}}
+{\footnotesize\ttfamily \#define OUT\+\_\+\+FORM~\char`\"{}\%d\char`\"{}}
+
+
+
+Output format for printf functions. 
+
+\mbox{\Hypertarget{config_8h_a44ce32c2c103442949904e92a5803f44}\label{config_8h_a44ce32c2c103442949904e92a5803f44}} 
+\index{config.h@{config.h}!POISON1@{POISON1}}
+\index{POISON1@{POISON1}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{POISON1}{POISON1}}
+{\footnotesize\ttfamily \#define POISON1~0x\+BD}
+
+
+
+1 byte Poison 
+
+\mbox{\Hypertarget{config_8h_a8ee8fd516222866a78ba4a4aae2eb10c}\label{config_8h_a8ee8fd516222866a78ba4a4aae2eb10c}} 
+\index{config.h@{config.h}!POISON2@{POISON2}}
+\index{POISON2@{POISON2}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{POISON2}{POISON2}}
+{\footnotesize\ttfamily \#define POISON2~0x\+BDCF}
+
+
+
+2 byte Poison 
+
+\mbox{\Hypertarget{config_8h_a636a49191f541b52557a278556c8640e}\label{config_8h_a636a49191f541b52557a278556c8640e}} 
+\index{config.h@{config.h}!POISON4@{POISON4}}
+\index{POISON4@{POISON4}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{POISON4}{POISON4}}
+{\footnotesize\ttfamily \#define POISON4~0x\+BADC0\+FEE}
+
+
+
+4 byte Poison 
+
+\mbox{\Hypertarget{config_8h_a87f9c88b5d9ecba250a24151f4f4f9b9}\label{config_8h_a87f9c88b5d9ecba250a24151f4f4f9b9}} 
+\index{config.h@{config.h}!POISON8@{POISON8}}
+\index{POISON8@{POISON8}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{POISON8}{POISON8}}
+{\footnotesize\ttfamily \#define POISON8~0x\+BADC0\+FEEF04\+DED32}
+
+
+
+8 byte Poison 
+
+\mbox{\Hypertarget{config_8h_ab33094546bed65d3ddf7252ec7ee53a0}\label{config_8h_ab33094546bed65d3ddf7252ec7ee53a0}} 
+\index{config.h@{config.h}!setPoison@{setPoison}}
+\index{setPoison@{setPoison}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{setPoison}{setPoison}}
+{\footnotesize\ttfamily \#define set\+Poison(\begin{DoxyParamCaption}\item[{}]{var }\end{DoxyParamCaption})~\mbox{\hyperlink{stack_8cpp_a60bb9a078b9f0f215577719c53003db2}{set\+Poison\+Inside}} (\&var, sizeof (var))}
+
+
+
+Macros for auto-\/poison. 
+
+\mbox{\Hypertarget{config_8h_a69595dc2450bd35617f155ffa5738490}\label{config_8h_a69595dc2450bd35617f155ffa5738490}} 
+\index{config.h@{config.h}!StackDump@{StackDump}}
+\index{StackDump@{StackDump}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{StackDump}{StackDump}}
+{\footnotesize\ttfamily \#define Stack\+Dump(\begin{DoxyParamCaption}\item[{}]{stk }\end{DoxyParamCaption})~\mbox{\hyperlink{stack_8cpp_aa57535478796950bea6860e32e15b33c}{Stack\+Dump\+Inside}} (\&stk, \#stk, \+\_\+\+\_\+\+FILE\+\_\+\+\_\+, \+\_\+\+\_\+\+FUNCTION\+\_\+\+\_\+, \+\_\+\+\_\+\+LINE\+\_\+\+\_\+)}
+
+
+
+\mbox{\hyperlink{struct_stack}{Stack}} dump macros. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4b}\label{config_8h_abedba404d3287b5f1ba88ede8463da4b}} 
+\index{config.h@{config.h}!StackErrorCodes@{StackErrorCodes}}
+\index{StackErrorCodes@{StackErrorCodes}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{StackErrorCodes}{StackErrorCodes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{config_8h_abedba404d3287b5f1ba88ede8463da4b}{Stack\+Error\+Codes}}}
+
+
+
+Describes errors within stack. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ok@{ok}!config.h@{config.h}}\index{config.h@{config.h}!ok@{ok}}}\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4bad8b76af209cd7ba83b4ebf33ba1637b2}\label{config_8h_abedba404d3287b5f1ba88ede8463da4bad8b76af209cd7ba83b4ebf33ba1637b2}} 
+ok&All ok. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POISON\_ACCESS@{POISON\_ACCESS}!config.h@{config.h}}\index{config.h@{config.h}!POISON\_ACCESS@{POISON\_ACCESS}}}\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4bafaeaafb72f3224f4bb55b58b75236287}\label{config_8h_abedba404d3287b5f1ba88ede8463da4bafaeaafb72f3224f4bb55b58b75236287}} 
+POISON\+\_\+\+ACCESS&One or more struct elements is poison. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAD\_CAN\_L@{BAD\_CAN\_L}!config.h@{config.h}}\index{config.h@{config.h}!BAD\_CAN\_L@{BAD\_CAN\_L}}}\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4ba4215e890c310c3f5ccd3f11486b2eb78}\label{config_8h_abedba404d3287b5f1ba88ede8463da4ba4215e890c310c3f5ccd3f11486b2eb78}} 
+BAD\+\_\+\+CAN\+\_\+L&Dead left cannary of structure. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAD\_CAN\_R@{BAD\_CAN\_R}!config.h@{config.h}}\index{config.h@{config.h}!BAD\_CAN\_R@{BAD\_CAN\_R}}}\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4ba58c89f81506bf0555b66e55bf326c6df}\label{config_8h_abedba404d3287b5f1ba88ede8463da4ba58c89f81506bf0555b66e55bf326c6df}} 
+BAD\+\_\+\+CAN\+\_\+R&Dead right cannary of structure. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAD\_STACK\_CAN\_L@{BAD\_STACK\_CAN\_L}!config.h@{config.h}}\index{config.h@{config.h}!BAD\_STACK\_CAN\_L@{BAD\_STACK\_CAN\_L}}}\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4ba933bc67a98e186610bc08f655de7da44}\label{config_8h_abedba404d3287b5f1ba88ede8463da4ba933bc67a98e186610bc08f655de7da44}} 
+BAD\+\_\+\+STACK\+\_\+\+CAN\+\_\+L&Dead left cannary of stack. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAD\_STACK\_CAN\_R@{BAD\_STACK\_CAN\_R}!config.h@{config.h}}\index{config.h@{config.h}!BAD\_STACK\_CAN\_R@{BAD\_STACK\_CAN\_R}}}\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4ba74459aaef8d1a41df374ff51fdbf38da}\label{config_8h_abedba404d3287b5f1ba88ede8463da4ba74459aaef8d1a41df374ff51fdbf38da}} 
+BAD\+\_\+\+STACK\+\_\+\+CAN\+\_\+R&Dead right cannary of stack. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NULL\_STACK\_PTR@{NULL\_STACK\_PTR}!config.h@{config.h}}\index{config.h@{config.h}!NULL\_STACK\_PTR@{NULL\_STACK\_PTR}}}\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4ba55bc3e5442f1fb70cc4b4b814b9fcec5}\label{config_8h_abedba404d3287b5f1ba88ede8463da4ba55bc3e5442f1fb70cc4b4b814b9fcec5}} 
+NULL\+\_\+\+STACK\+\_\+\+PTR&NULL ptr for stack. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NULL\_STACK\_CAN\_L\_PTR@{NULL\_STACK\_CAN\_L\_PTR}!config.h@{config.h}}\index{config.h@{config.h}!NULL\_STACK\_CAN\_L\_PTR@{NULL\_STACK\_CAN\_L\_PTR}}}\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4ba15dfa62adb3f9feb09ae9dc9beb7c117}\label{config_8h_abedba404d3287b5f1ba88ede8463da4ba15dfa62adb3f9feb09ae9dc9beb7c117}} 
+NULL\+\_\+\+STACK\+\_\+\+CAN\+\_\+\+L\+\_\+\+PTR&NULL ptr for left stack cannary. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NULL\_STACK\_CAN\_R\_PTR@{NULL\_STACK\_CAN\_R\_PTR}!config.h@{config.h}}\index{config.h@{config.h}!NULL\_STACK\_CAN\_R\_PTR@{NULL\_STACK\_CAN\_R\_PTR}}}\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4ba907004763cf34ab8b352775f820539c3}\label{config_8h_abedba404d3287b5f1ba88ede8463da4ba907004763cf34ab8b352775f820539c3}} 
+NULL\+\_\+\+STACK\+\_\+\+CAN\+\_\+\+R\+\_\+\+PTR&NULL ptr for right stack cannary. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WRONG\_SIZE@{WRONG\_SIZE}!config.h@{config.h}}\index{config.h@{config.h}!WRONG\_SIZE@{WRONG\_SIZE}}}\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4badb8b16b7866a0eee3872f249bc06c5ac}\label{config_8h_abedba404d3287b5f1ba88ede8463da4badb8b16b7866a0eee3872f249bc06c5ac}} 
+WRONG\+\_\+\+SIZE&Size is more than capacity. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POISONED\_ERRCOD@{POISONED\_ERRCOD}!config.h@{config.h}}\index{config.h@{config.h}!POISONED\_ERRCOD@{POISONED\_ERRCOD}}}\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4ba5065ca273e32d5426390f43601261d6c}\label{config_8h_abedba404d3287b5f1ba88ede8463da4ba5065ca273e32d5426390f43601261d6c}} 
+POISONED\+\_\+\+ERRCOD&Errcod variable is poisoned; Ususally means that struct has been destructed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WRONG\_HASH@{WRONG\_HASH}!config.h@{config.h}}\index{config.h@{config.h}!WRONG\_HASH@{WRONG\_HASH}}}\mbox{\Hypertarget{config_8h_abedba404d3287b5f1ba88ede8463da4baf82caa47427767f6099c52129b9ce508}\label{config_8h_abedba404d3287b5f1ba88ede8463da4baf82caa47427767f6099c52129b9ce508}} 
+WRONG\+\_\+\+HASH&Hash was changed without any changes from specified function. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{config_8h_a00d7f278e2c87be49ce52a84f1f925cb}\label{config_8h_a00d7f278e2c87be49ce52a84f1f925cb}} 
+\index{config.h@{config.h}!isPoisonInside@{isPoisonInside}}
+\index{isPoisonInside@{isPoisonInside}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{isPoisonInside()}{isPoisonInside()}}
+{\footnotesize\ttfamily bool is\+Poison\+Inside (\begin{DoxyParamCaption}\item[{void $\ast$}]{var,  }\item[{size\+\_\+t}]{sizeof\+Var }\end{DoxyParamCaption})}
+
+
+
+Checks for a variable to be poisoned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & ptr to var \\
+\hline
+{\em sizeof\+Var} & size of var \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if poisoned, 0 if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{config_8h_ad48351fcbd6c3d4ce84d470636525430}\label{config_8h_ad48351fcbd6c3d4ce84d470636525430}} 
+\index{config.h@{config.h}!ReallocStackSizeShift@{ReallocStackSizeShift}}
+\index{ReallocStackSizeShift@{ReallocStackSizeShift}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{ReallocStackSizeShift()}{ReallocStackSizeShift()}}
+{\footnotesize\ttfamily void Realloc\+Stack\+Size\+Shift (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk,  }\item[{int}]{delta }\end{DoxyParamCaption})}
+
+
+
+Recallocates a whole stak with a size shift. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+{\em delta} & direction of size shift\+: $>$0 -\/ doubles the size, $<$0 halves the size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{config_8h_a60bb9a078b9f0f215577719c53003db2}\label{config_8h_a60bb9a078b9f0f215577719c53003db2}} 
+\index{config.h@{config.h}!setPoisonInside@{setPoisonInside}}
+\index{setPoisonInside@{setPoisonInside}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{setPoisonInside()}{setPoisonInside()}}
+{\footnotesize\ttfamily void set\+Poison\+Inside (\begin{DoxyParamCaption}\item[{void $\ast$}]{var,  }\item[{size\+\_\+t}]{sizeof\+Var }\end{DoxyParamCaption})}
+
+
+
+Sets var to a poisoned state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & ptr to var \\
+\hline
+{\em sizeof\+Var} & sizeof var \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{config_8h_a331eb5bc38763cfe6fead891904aac75}\label{config_8h_a331eb5bc38763cfe6fead891904aac75}} 
+\index{config.h@{config.h}!StackCountHash@{StackCountHash}}
+\index{StackCountHash@{StackCountHash}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{StackCountHash()}{StackCountHash()}}
+{\footnotesize\ttfamily void Stack\+Count\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk }\end{DoxyParamCaption})}
+
+
+
+Counts hash for stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{config_8h_a7f20099985e66f408b861724863a2f1b}\label{config_8h_a7f20099985e66f408b861724863a2f1b}} 
+\index{config.h@{config.h}!StackCtor@{StackCtor}}
+\index{StackCtor@{StackCtor}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{StackCtor()}{StackCtor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_stack}{Stack}} Stack\+Ctor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{struct_stack}{Stack}}; Sets default capacity to 4. 
+
+\begin{DoxyReturn}{Returns}
+Fully operable \mbox{\hyperlink{struct_stack}{Stack}} struct 
+\end{DoxyReturn}
+\mbox{\Hypertarget{config_8h_a7a748c43563a85e8c5d154997597c4bb}\label{config_8h_a7a748c43563a85e8c5d154997597c4bb}} 
+\index{config.h@{config.h}!StackDtor@{StackDtor}}
+\index{StackDtor@{StackDtor}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{StackDtor()}{StackDtor()}}
+{\footnotesize\ttfamily void Stack\+Dtor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk }\end{DoxyParamCaption})}
+
+
+
+Destroys a stack var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to a destroyable variable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{config_8h_aa57535478796950bea6860e32e15b33c}\label{config_8h_aa57535478796950bea6860e32e15b33c}} 
+\index{config.h@{config.h}!StackDumpInside@{StackDumpInside}}
+\index{StackDumpInside@{StackDumpInside}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{StackDumpInside()}{StackDumpInside()}}
+{\footnotesize\ttfamily void Stack\+Dump\+Inside (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk,  }\item[{const char $\ast$}]{Stack\+Name,  }\item[{const char $\ast$}]{file\+Name,  }\item[{const char $\ast$}]{func\+Name,  }\item[{size\+\_\+t}]{line }\end{DoxyParamCaption})}
+
+
+
+Dumps stack to logs\+\_\+out. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+{\em Stack\+Name} & name of stack \\
+\hline
+{\em file\+Name} & name of file function was called at \\
+\hline
+{\em func\+Name} & name of func function was called at \\
+\hline
+{\em line} & line function was called at \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{config_8h_a2ec9d6428127070aa546211087cc603b}\label{config_8h_a2ec9d6428127070aa546211087cc603b}} 
+\index{config.h@{config.h}!StackErrCheck@{StackErrCheck}}
+\index{StackErrCheck@{StackErrCheck}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{StackErrCheck()}{StackErrCheck()}}
+{\footnotesize\ttfamily unsigned long long Stack\+Err\+Check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk }\end{DoxyParamCaption})}
+
+
+
+Prints errors drom a stack variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error code stk-\/$>$err\+Code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{config_8h_a4fe32a828f1513115f6abf92f8f9a066}\label{config_8h_a4fe32a828f1513115f6abf92f8f9a066}} 
+\index{config.h@{config.h}!StackLogPrintErrors@{StackLogPrintErrors}}
+\index{StackLogPrintErrors@{StackLogPrintErrors}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{StackLogPrintErrors()}{StackLogPrintErrors()}}
+{\footnotesize\ttfamily void Stack\+Log\+Print\+Errors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk }\end{DoxyParamCaption})}
+
+
+
+Prints errors for a Stack\+Dump func. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{config_8h_a0941f0fc6decbec7accf45e25ea30eb5}\label{config_8h_a0941f0fc6decbec7accf45e25ea30eb5}} 
+\index{config.h@{config.h}!StackPop@{StackPop}}
+\index{StackPop@{StackPop}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{StackPop()}{StackPop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{config_8h_a178d810735b72dab41331e71af8bfe99}{ELEM\+\_\+\+TYPE}} Stack\+Pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk }\end{DoxyParamCaption})}
+
+
+
+Removes an element from stack and returns its value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+element that was removed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{config_8h_a6d12097bc4af03b6c58d724a10758a64}\label{config_8h_a6d12097bc4af03b6c58d724a10758a64}} 
+\index{config.h@{config.h}!StackPush@{StackPush}}
+\index{StackPush@{StackPush}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{StackPush()}{StackPush()}}
+{\footnotesize\ttfamily void Stack\+Push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk,  }\item[{\mbox{\hyperlink{config_8h_a178d810735b72dab41331e71af8bfe99}{ELEM\+\_\+\+TYPE}}}]{val }\end{DoxyParamCaption})}
+
+
+
+Places an element at the end of a stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack struct \\
+\hline
+{\em val} & value of an element to push \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{config_8h_a81529740cd4cad5153f44e74c5c27e64}\label{config_8h_a81529740cd4cad5153f44e74c5c27e64}} 
+\index{config.h@{config.h}!StackVerifyHash@{StackVerifyHash}}
+\index{StackVerifyHash@{StackVerifyHash}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{StackVerifyHash()}{StackVerifyHash()}}
+{\footnotesize\ttfamily void Stack\+Verify\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{stk }\end{DoxyParamCaption})}
+
+
+
+Verifies hash for stack (tells if it was changed without any \mbox{\hyperlink{struct_stack}{Stack}} specified functions) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stk} & ptr to stack \\
+\hline
+\end{DoxyParams}

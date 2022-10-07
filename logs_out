@@ -1,234 +1,175 @@
 ----------------------------------------
-Logging session at compiled time : 13:22:25 Oct  1 2022 
+Logging session at compiled time : 17:40:32 Oct  1 2022 
 
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1637736326;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1637736326;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1637736326;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1637736326;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1639610487;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1639610487;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1639610487;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1639610487;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1639610487;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2044365467;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2044365467;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2044365467;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 2044365467;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2044365467;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1402332562;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1402332562;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1402332562;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1402332562;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1402332562;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1529532924;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1529532924;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1529532924;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1529532924;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1529532924;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1529532924;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1529532924;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1529532924;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1134122104;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1134122104;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3173241845;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3173241845;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3173241845;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 3173241845;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3173241845;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2014568741;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2014568741;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2014568741;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 2014568741;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2014568741;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3619860392;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3619860392;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3619860392;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 3619860392;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3619860392;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2566908702;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2566908702;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2566908702;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 2566908702;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2566908702;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2566908702;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 2566908702;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2566908702;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3800143029;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3800143029;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4159878078;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4159878078;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4159878078;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 4159878078;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4159878078;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 580982010;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 580982010;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 580982010;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 580982010;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 580982010;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4204417033;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4204417033;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4204417033;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 4204417033;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4204417033;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1178629515;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1178629515;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1178629515;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1178629515;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1178629515;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1761169184;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1761169184;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1761169184;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1761169184;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1761169184;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3273432936;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3273432936;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3273432936;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 3273432936;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3273432936;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2696071416;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2696071416;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2696071416;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 2696071416;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2696071416;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3215644459;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3215644459;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3215644459;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 3215644459;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3215644459;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3215644459;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 3215644459;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3215644459;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 609323221;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 609323221;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 486735435;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 486735435;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 486735435;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 486735435;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 486735435;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1917716132;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1917716132;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1917716132;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1917716132;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1917716132;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2224666240;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2224666240;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2224666240;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 2224666240;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2224666240;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 201411455;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 201411455;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 201411455;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 201411455;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 201411455;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2878368833;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2878368833;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2878368833;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 2878368833;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2878368833;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2716813158;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2716813158;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2716813158;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 2716813158;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2716813158;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1897088654;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1897088654;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1897088654;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1897088654;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1897088654;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 385338201;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 385338201;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 385338201;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 385338201;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 385338201;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3751780455;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3751780455;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3751780455;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 3751780455;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3751780455;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3753654616;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3753654616;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3753654616;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 3753654616;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3753654616;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3701732044;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3701732044;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3701732044;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 3701732044;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3701732044;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4110033224;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4110033224;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4110033224;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 4110033224;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4110033224;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 568382263;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 568382263;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 568382263;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 568382263;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 568382263;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 891348281;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 891348281;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 891348281;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 891348281;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 891348281;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2807024878;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2807024878;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2807024878;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 2807024878;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 2807024878;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1695930614;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1695930614;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1695930614;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1695930614;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1695930614;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1695930614;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1695930614;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1695930614;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3070052581;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3070052581;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1452990688;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1452990688;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1452990688;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1452990688;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1452990688;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4253861230;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4253861230;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4253861230;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 4253861230;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4253861230;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3945266991;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3945266991;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3945266991;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 3945266991;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 3945266991;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 389947843;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 389947843;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 389947843;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 389947843;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 389947843;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1006598346;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1006598346;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1006598346;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1006598346;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1006598346;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1898948836;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1898948836;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1898948836;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 1898948836;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 1898948836;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4135907249;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4135907249;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4135907249;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 4135907249;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4135907249;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 912679889;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 912679889;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 912679889;
-In file stack.cpp, function StackVerifyHash, line 351 : stk->hash = 912679889;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 912679889;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4135907249;
-In file stack.cpp, function StackCountHash, line 337 : stk->hash = 4135907249;
-In file main.cpp, function main, line 13 : t = 741;
-----------------------------------------
-Logging session at compiled time : 13:23:23 Oct  1 2022 
-
-In file main.cpp, function main, line 13 : t = 741;
+In file main.cpp, function main, line 7, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 2637818739 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 0
+		lol.stack[1] : 0
+		lol.stack[2] : 0
+		lol.stack[3] : 0
+	End of stack
+End of dump 
+In file main.cpp, function main, line 14, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 2588008269 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 40 (ok)
+	capacity = 64 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 32
+		lol.stack[16] : 34
+		lol.stack[17] : 36
+		lol.stack[18] : 38
+		lol.stack[19] : 40
+		lol.stack[20] : 42
+		lol.stack[21] : 44
+		lol.stack[22] : 46
+		lol.stack[23] : 48
+		lol.stack[24] : 50
+		lol.stack[25] : 52
+		lol.stack[26] : 54
+		lol.stack[27] : 56
+		lol.stack[28] : 58
+		lol.stack[29] : 60
+		lol.stack[30] : 62
+		lol.stack[31] : 64
+		lol.stack[32] : 66
+		lol.stack[33] : 68
+		lol.stack[34] : 70
+		lol.stack[35] : 72
+		lol.stack[36] : 74
+		lol.stack[37] : 76
+		lol.stack[38] : 78
+		lol.stack[39] : 80
+		lol.stack[40] : 0
+		lol.stack[41] : 0
+		lol.stack[42] : 0
+		lol.stack[43] : 0
+		lol.stack[44] : 0
+		lol.stack[45] : 0
+		lol.stack[46] : 0
+		lol.stack[47] : 0
+		lol.stack[48] : 0
+		lol.stack[49] : 0
+		lol.stack[50] : 0
+		lol.stack[51] : 0
+		lol.stack[52] : 0
+		lol.stack[53] : 0
+		lol.stack[54] : 0
+		lol.stack[55] : 0
+		lol.stack[56] : 0
+		lol.stack[57] : 0
+		lol.stack[58] : 0
+		lol.stack[59] : 0
+		lol.stack[60] : 0
+		lol.stack[61] : 0
+		lol.stack[62] : 0
+		lol.stack[63] : 0
+	End of stack
+End of dump 
+In file main.cpp, function main, line 22, stack named lol was dumped : 
+	Errors : 
+		[ok]
+	hash = 2070724586 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 40 (ok)
+	capacity = 64 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	lol.stack : 
+		lol.stack[0] : 2
+		lol.stack[1] : 4
+		lol.stack[2] : 6
+		lol.stack[3] : 8
+		lol.stack[4] : 10
+		lol.stack[5] : 12
+		lol.stack[6] : 14
+		lol.stack[7] : 16
+		lol.stack[8] : 18
+		lol.stack[9] : 20
+		lol.stack[10] : 22
+		lol.stack[11] : 24
+		lol.stack[12] : 26
+		lol.stack[13] : 28
+		lol.stack[14] : 30
+		lol.stack[15] : 32
+		lol.stack[16] : 34
+		lol.stack[17] : 36
+		lol.stack[18] : 38
+		lol.stack[19] : 40
+		lol.stack[20] : 42
+		lol.stack[21] : 44
+		lol.stack[22] : 46
+		lol.stack[23] : 48
+		lol.stack[24] : 50
+		lol.stack[25] : 52
+		lol.stack[26] : 54
+		lol.stack[27] : 56
+		lol.stack[28] : 58
+		lol.stack[29] : 60
+		lol.stack[30] : 62
+		lol.stack[31] : 64
+		lol.stack[32] : 66
+		lol.stack[33] : 68
+		lol.stack[34] : 70
+		lol.stack[35] : 72
+		lol.stack[36] : 74
+		lol.stack[37] : 76
+		lol.stack[38] : 78
+		lol.stack[39] : 456
+		lol.stack[40] : 0
+		lol.stack[41] : 0
+		lol.stack[42] : 0
+		lol.stack[43] : 0
+		lol.stack[44] : 0
+		lol.stack[45] : 0
+		lol.stack[46] : 0
+		lol.stack[47] : 0
+		lol.stack[48] : 0
+		lol.stack[49] : 0
+		lol.stack[50] : 0
+		lol.stack[51] : 0
+		lol.stack[52] : 0
+		lol.stack[53] : 0
+		lol.stack[54] : 0
+		lol.stack[55] : 0
+		lol.stack[56] : 0
+		lol.stack[57] : 0
+		lol.stack[58] : 0
+		lol.stack[59] : 0
+		lol.stack[60] : 0
+		lol.stack[61] : 0
+		lol.stack[62] : 0
+		lol.stack[63] : 0
+	End of stack
+End of dump 
+In file main.cpp, function main, line 24 : t = 456;

@@ -1,0 +1,78 @@
+\hypertarget{flog_8cpp}{}\doxysection{flog.\+cpp File Reference}
+\label{flog_8cpp}\index{flog.cpp@{flog.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$typeinfo$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{flog_8cpp_a23bb6ec745b7a257bfdeb70b0a492d07}{flog}}(a)
+\item 
+\#define \mbox{\hyperlink{flog_8cpp_a424d6d076fb3d27a42521b6b3545523f}{flog\+File\+Init}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{flog_8cpp_afec575ee9bc12668090cc4c28e8c1c66}{flog\+Intern}} (const void $\ast$val, const char $\ast$var\+Type, const char $\ast$var\+Name, size\+\_\+t var\+Size, const char $\ast$file\+Name, const char $\ast$func\+Name, size\+\_\+t line)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+FILE $\ast$ \mbox{\hyperlink{flog_8cpp_a0ba15c7ed1438007848e9552341264cf}{log\+Outf}} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{flog_8cpp_a23bb6ec745b7a257bfdeb70b0a492d07}\label{flog_8cpp_a23bb6ec745b7a257bfdeb70b0a492d07}} 
+\index{flog.cpp@{flog.cpp}!flog@{flog}}
+\index{flog@{flog}!flog.cpp@{flog.cpp}}
+\doxysubsubsection{\texorpdfstring{flog}{flog}}
+{\footnotesize\ttfamily \#define flog(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (\mbox{\hyperlink{flog_8cpp_a0ba15c7ed1438007848e9552341264cf}{logOutf}} == NULL)\{                                                                 \(\backslash\)}
+\DoxyCodeLine{                logOutf = fopen (\textcolor{stringliteral}{"{}logs\_out"{}}, \textcolor{stringliteral}{"{}a"{}});                                                \(\backslash\)}
+\DoxyCodeLine{                setvbuf (\mbox{\hyperlink{flog_8cpp_a0ba15c7ed1438007848e9552341264cf}{logOutf}}, NULL, \_IONBF, 0);                                               \(\backslash\)}
+\DoxyCodeLine{                fprintf (\mbox{\hyperlink{flog_8cpp_a0ba15c7ed1438007848e9552341264cf}{logOutf}}, \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}                    \(\backslash\)}
+\DoxyCodeLine{                \textcolor{stringliteral}{"{}Logging session at compiled time : \%s \%s \(\backslash\)n\(\backslash\)n"{}}, \_\_TIME\_\_, \_\_DATE\_\_);             \(\backslash\)}
+\DoxyCodeLine{            \}                                                                                     \(\backslash\)}
+\DoxyCodeLine{            flogIntern (\&a, \textcolor{keyword}{typeid} (a).name (), \#a, \textcolor{keyword}{sizeof} (a), \_\_FILE\_\_, \_\_FUNCTION\_\_, \_\_LINE\_\_)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{flog_8cpp_a424d6d076fb3d27a42521b6b3545523f}\label{flog_8cpp_a424d6d076fb3d27a42521b6b3545523f}} 
+\index{flog.cpp@{flog.cpp}!flogFileInit@{flogFileInit}}
+\index{flogFileInit@{flogFileInit}!flog.cpp@{flog.cpp}}
+\doxysubsubsection{\texorpdfstring{flogFileInit}{flogFileInit}}
+{\footnotesize\ttfamily \#define flog\+File\+Init}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                \textcolor{keywordflow}{if} (\mbox{\hyperlink{flog_8cpp_a0ba15c7ed1438007848e9552341264cf}{logOutf}} == NULL)\{                                                        \(\backslash\)}
+\DoxyCodeLine{                logOutf = fopen (\textcolor{stringliteral}{"{}logs\_out"{}}, \textcolor{stringliteral}{"{}a"{}});                                                \(\backslash\)}
+\DoxyCodeLine{                setvbuf (\mbox{\hyperlink{flog_8cpp_a0ba15c7ed1438007848e9552341264cf}{logOutf}}, NULL, \_IONBF, 0);                                               \(\backslash\)}
+\DoxyCodeLine{                fprintf (\mbox{\hyperlink{flog_8cpp_a0ba15c7ed1438007848e9552341264cf}{logOutf}}, \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}                    \(\backslash\)}
+\DoxyCodeLine{                \textcolor{stringliteral}{"{}Logging session at compiled time : \%s \%s \(\backslash\)n\(\backslash\)n"{}}, \_\_TIME\_\_, \_\_DATE\_\_);             \(\backslash\)}
+\DoxyCodeLine{            \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{flog_8cpp_afec575ee9bc12668090cc4c28e8c1c66}\label{flog_8cpp_afec575ee9bc12668090cc4c28e8c1c66}} 
+\index{flog.cpp@{flog.cpp}!flogIntern@{flogIntern}}
+\index{flogIntern@{flogIntern}!flog.cpp@{flog.cpp}}
+\doxysubsubsection{\texorpdfstring{flogIntern()}{flogIntern()}}
+{\footnotesize\ttfamily void flog\+Intern (\begin{DoxyParamCaption}\item[{const void $\ast$}]{val,  }\item[{const char $\ast$}]{var\+Type,  }\item[{const char $\ast$}]{var\+Name,  }\item[{size\+\_\+t}]{var\+Size,  }\item[{const char $\ast$}]{file\+Name,  }\item[{const char $\ast$}]{func\+Name,  }\item[{size\+\_\+t}]{line }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{flog_8cpp_a0ba15c7ed1438007848e9552341264cf}\label{flog_8cpp_a0ba15c7ed1438007848e9552341264cf}} 
+\index{flog.cpp@{flog.cpp}!logOutf@{logOutf}}
+\index{logOutf@{logOutf}!flog.cpp@{flog.cpp}}
+\doxysubsubsection{\texorpdfstring{logOutf}{logOutf}}
+{\footnotesize\ttfamily FILE$\ast$ log\+Outf = NULL}
+
